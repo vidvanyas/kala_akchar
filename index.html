@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- =========================Custume Style========================== -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
+  <!-- =========================Font Awesome========================== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!-- =========================Google Font========================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <!-- =========================Slick Slider========================== -->
+  <link rel="stylesheet" href="slick_css/slick.css" />
+  <link rel="stylesheet" href="slick_css/slick-theme.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  
+
+  <title>Kala Achor - Home</title>
+</head>
+
+<body>
+  <!-- ----------- Header -------------- -->
+  <div class="akc_header">
+    <div class="getfunc  brand_logo">
+      <a href="../Home_page/index.html"><img src="images/logo.png" alt="Logo" /></a>
+    </div>
+    <div class="getfunc links">
+      <a href="#" class="link">Home</a>
+      <a href="#" class="link">Weman Products</a>
+      <a href="#" class="link">About Us</a>
+    </div>
+    <span class="getback">
+      <i onclick="closes()" class="fa-sharp fa-solid fa-arrow-left arro hide z-9"></i>
+    </span>
+    <div class="search_btn getsearch" onclick="searchfull()">
+      <span>
+        <i class="fa-sharp fa-solid fa-magnifying-glass srch "></i>
+      </span>
+      <input type="text" placeholder="Search Here" id="inoutbox" />
+      <span><i class="fa-sharp fa-solid fa-close close hide"></i></span>
+
+    </div>
+
+    <div class="getfunc right_link_logo">
+      <a href="../Home_page/cart.html#"><i class="fa-solid fa-cart-shopping H_cart_btn"></i></a>
+      <a href="../Home_page/wishlist.html#"><i class="fa-solid fa-heart"></i></a>
+    </div>
+    <div class="getfunc user_profile hide">
+      <a href="../Home Page/dashbord.html">
+      <img
+        src="https://3.bp.blogspot.com/-kdlF5AdkRfw/WTaHz7uBeAI/AAAAAAAAMMA/lgPnfnqjtGcRJYOzaYCoiPsgGJD9Gh6dgCLcB/s1600/1415352366Neha-Kakkar-Singer-.jpg"
+        alt="user_profile" />
+      </a>
+    </div>
+    <!-- ===================Login Btn============ -->
+    <button type="button" onclick="openPopUp()" class="getfunc Btn Btn-black m-r-1">Login</button>
+  </div>
+
+  <!-- /* ============================= Pop Up model =================== */ -->
+  <div id="overlay" onclick="closePopUp()" class="overlay"></div>
+
+  <div id="popup" class="popup-content">
+    <span class="close-btn" onclick="closePopUp()"><i class="fa-solid fa-xmark"></i></span>
+    <div class="login">
+      <div class="left_logo_box">
+        <div class="logo_leyer_1">
+          <img src="images/logo.png" alt="logo">
+
+        </div>
+      </div>
+      <div class="right_form_box">
+
+        <div class="form_box">
+          <div class="log-reg-btn_box">
+            <button  onclick="togglelogin()">Login</button>
+            <button onclick="toggleregister()">Register</button>
+          </div>
+
+            <form id="logpage" class="" action="">
+              <div class="input_box">
+                <input type="text" required>
+                <label for="username">Email / Phone</label>
+              </div>
+              <div class="input_box">
+                <input type="text" required>
+                <label for="username">Password</label>
+              </div>
+
+              <div class="input_box">
+                <button class="Btn Btn-blue" type="submit">Login</button>
+              </div>
+            </form>
+
+            <form id="Otppage" class="hide" action="">
+              <div class="input_box">
+                <input type="text" required>
+                <label for="username">Email / Phone</label>
+              </div>
+              <div class="input_box">
+                <button class="Btn Btn-blue" type="button" onclick="toggleOtp()">Get OTP</button>
+              </div>
+            </form>
+
+            <form id="regpage" class="hide" action="">
+              <div class="input_box">
+                <input type="text" required>
+                <label for="username">OTP</label>
+              </div>
+
+              <div class="input_box">
+                <input type="password" required>
+                <label for="username">Password</label>
+              </div>
+
+              <div class="input_box">
+                <input type="text" required>
+                <label for="username">Confirm Password</label>
+              </div>
+
+              <div class="input_box">
+                <button class="Btn Btn-blue" type="submit">Submit</button>
+              </div>
+            </form>
+
+          </div>
+
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+  <!-- /* =============================Container Top Products  =================== */ -->
+
+  <div class="akch-container">
+    <div class="product_box_container">
+
+      <div class="left_item_box">
+        <div class="product_box">
+
+          <div class="product_slide_card wh-2-25">
+            <div class="img_box">
+               <a href="../Home_page/product_detail.html">
+              <img src="images/t_shirt.png" alt="img">
+            </a>
+            </div>
+            <div class="title">
+              <h3>T-shirt</h3>
+              <p>₹300</p>
+            </div>
+          </div>
+
+          <div class="product_slide_card wh-2-25">
+            <div class="img_box">
+              <a href="../Home_page/product_detail.html">
+              <img src="images/t_shirt.png" alt="img">
+            </a>
+            </div>
+            <div class="title">
+              <h3>T-shirt</h3>
+              <p>₹300</p>
+            </div>
+          </div>
+
+          <div class="product_slide_card  wh-2-25">
+            <div class="img_box">
+              <a href="../Home_page/product_detail.html">
+              <img src="images/t_shirt.png" alt="img">
+            </a>
+            </div>
+            <div class="title">
+              <h3>T-shirt</h3>
+              <p>₹300</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="center_item_box">
+        <div class="center_container">
+          <!-- <div class="center_product_box">
+            <div class="product_img">
+              <div class="logo">
+                <img src="images/logo.png" alt="logo">
+              </div>
+              <div class="img_box">
+                <img src="images/t_shirt.png" alt="image">
+              </div>
+              <div class="btn_group m-t-2">
+                <button class="Btn Btn-black">Buy Now</button>
+                <button class="Btn Btn-blue">Add to Cart</button>
+              </div>
+            </div>
+
+            <div class="product_details">
+              <div class="product_name">
+                <h2>Believe</h2>
+              </div>
+              <div class="price">
+                <p>₹300</p>
+              </div>
+              <div class="product_colors m-t-2">
+                <a href="#" class=" color black circle_active"></a>
+                <a href="#" class=" color pink"></a>
+                <a href="#" class=" color nimy_blue"></a>
+                <a href="#" class=" color white"></a>
+              </div>
+              <div class="Size m-t-2">
+                <a class="size size_active" href="#">S</a>
+                <a class="size " href="#">M</a>
+                <a class="size " href="#">L</a>
+                <a class="size " href="#">XL</a>
+              </div>
+              <div class="quantity m-t-2">
+                <div class="input_btn">
+                  <i id="negative" class="fa-sharp fa-solid fa-circle-minus"></i>
+                  <input type="text" id="quaintity" value="" />
+                  <i id="positive" class="fa-sharp fa-solid fa-circle-plus"></i>
+                </div>
+              </div>
+
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="right_item_box">
+        <div class="product_slide_box">
+          <div class="product_box">
+            <div class="product_slide_card wh-2-25">
+              <div class="img_box">
+                <img src="images/t_shirt.png" alt="img">
+              </div>
+              <div class="title ">
+                <h3>T-shirt</h3>
+                <p>₹300</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+
+      <div class="bottom_right_products">
+        <div class="product_box f-row justify-center ">
+          <div class="br_card_slide">
+            <div class="img_box">
+              <img src="images/t_shirt.png" alt="img">
+            </div>
+            <div class="title ">
+              <h3 class="f-size-14px">T-shirt</h3>
+              <p>₹300</p>
+            </div>
+          </div>
+
+          <div class="br_card_slide">
+            <div class="img_box">
+              <img src="images/t_shirt.png" alt="img">
+            </div>
+            <div class="title">
+              <h3 class="f-size-14px">T-shirt</h3>
+              <p>₹300</p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- /* ============================= Categories =================== */ -->
+
+  <div class="akc_category">
+    <h1>
+      Cotegories
+    </h1>
+    <div class="item-slider">
+      <div class="category_item"> </div>
+      <div class="category_item"> </div>
+      <div class="category_item"> </div>
+      <div class="category_item"> </div>
+
+    </div>
+  </div>
+  <!-- /* =============================Hot Deals =================== */ -->
+
+  <div class="akc_hot_deals">
+    <div class="hot_item w-20">
+      <h1>Hot Deals</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </p>
+    </div>
+
+    <div class=" hot_item">
+      <div class="hot-product radius-t-lr bg-color">
+        <div class="img_box">
+          <img src="images/t_shirt.png" alt="img">
+        </div>
+        <div class="title">
+          <h3>T-shirt</h3>
+          <p>₹300</p>
+        </div>
+      </div>
+    </div>
+
+    <div class=" hot_item">
+      <div class="hot-product radius-t-lr bg-color">
+        <div class="img_box">
+          <img src="images/t_shirt.png" alt="img">
+        </div>
+        <div class="title">
+          <h3>T-shirt</h3>
+          <p>₹300</p>
+        </div>
+      </div>
+    </div>
+
+    <div class=" hot_item">
+      <div class="hot-product radius-t-lr bg-color">
+        <div class="img_box">
+          <img src="images/t_shirt.png" alt="img">
+        </div>
+        <div class="title">
+          <h3>T-shirt</h3>
+          <p>₹300</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /* =============================Newly Arrived ================ */ -->
+
+  <div class="newly_arrived_continer">
+    <h1>Newly Arrived</h1>
+    <div class="newly_item">
+
+      <div class="product_slide_card ">
+        <div class="price">
+          <h4>₹1200</h4>
+          <span>₹1100</span>
+        </div>
+        <div class="img_box">
+          <img src="images/t_shirt.png" alt="img">
+        </div>
+        <div class="title">
+          <h3>T-shirt</h3>
+          <p>34%<span>off</span></p>
+        </div>
+      </div>
+
+      <div class="product_slide_card">
+        <div class="price">
+          <h4>₹300</h4>
+          <span>₹700</span>
+        </div>
+        <div class="img_box">
+          <img src="images/t_shirt.png" alt="img">
+        </div>
+        <div class="title">
+          <h3>T-shirt</h3>
+          <p>34%<span>off</span></p>
+        </div>
+      </div>
+
+      <div class="product_slide_card">
+        <div class="price">
+          <h4>₹300</h4>
+          <span>₹700</span>
+        </div>
+        <div class="img_box">
+          <img src="images/t_shirt.png" alt="img">
+        </div>
+        <div class="title">
+          <h3>T-shirt</h3>
+          <p>34%<span>off</span></p>
+        </div>
+      </div>
+
+      <div class="product_slide_card">
+        <div class="price">
+          <h4>₹300</h4>
+          <span>₹700</span>
+        </div>
+        <div class="img_box">
+          <img src="images/t_shirt.png" alt="img">
+        </div>
+        <div class="title">
+          <h3>T-shirt</h3>
+          <p>34%<span>off</span></p>
+        </div>
+      </div>
+
+      <div class="product_slide_card">
+        <div class="price">
+          <h4>₹300</h4>
+          <span>₹700</span>
+        </div>
+        <div class="img_box">
+          <img src="images/t_shirt.png" alt="img">
+        </div>
+        <div class="title">
+          <h3>T-shirt</h3>
+          <p>34%<span>off</span></p>
+        </div>
+      </div>
+
+      <div class="product_slide_card">
+        <div class="price">
+          <h4>₹300</h4>
+          <span>₹700</span>
+        </div>
+        <div class="img_box">
+          <img src="images/t_shirt.png" alt="img">
+        </div>
+        <div class="title">
+          <h3>T-shirt</h3>
+          <p>34%<span>off</span></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- /* ============================= Akchar T-Shirts =================== */ -->
+  <div class="akc_t-shirt_container">
+    <h1>Akchar T-shirt</h1>
+    <a class="left_arrow"><i class="fas fa-caret-left"></i></a>
+    <div class="slider_t-shirt">
+
+      <div class="t-slide">
+        <div class="hot-product box-shadow radius-10 bg-color">
+          <div class="img_box">
+            <img src="images/t_shirt.png" alt="img">
+          </div>
+          <div class="title">
+            <h3>T-shirt</h3>
+            <p>₹300</p>
+          </div>
+        </div>
+      </div>
+      <div class="t-slide">
+        <div class="hot-product box-shadow radius-10 bg-color">
+          <div class="img_box">
+            <img src="images/t_shirt.png" alt="img">
+          </div>
+          <div class="title">
+            <h3>T-shirt</h3>
+            <p>₹300</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-slide">
+        <div class="hot-product box-shadow radius-10 bg-color">
+          <div class="img_box">
+            <img src="images/t_shirt.png" alt="img">
+          </div>
+          <div class="title">
+            <h3>T-shirt</h3>
+            <p>₹300</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-slide">
+        <div class="hot-product box-shadow radius-10 bg-color">
+          <div class="img_box">
+            <img src="images/t_shirt.png" alt="img">
+          </div>
+          <div class="title">
+            <h3>T-shirt</h3>
+            <p>₹300</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-slide">
+        <div class="hot-product box-shadow radius-10 bg-color">
+          <div class="img_box">
+            <img src="images/t_shirt.png" alt="img">
+          </div>
+          <div class="title">
+            <h3>T-shirt</h3>
+            <p>₹300</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-slide">
+        <div class="hot-product box-shadow radius-10 bg-color">
+          <div class="img_box">
+            <img src="images/t_shirt.png" alt="img">
+          </div>
+          <div class="title">
+            <h3>T-shirt</h3>
+            <p>₹300</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-slide">
+        <div class="hot-product box-shadow radius-10 bg-color">
+          <div class="img_box">
+            <img src="images/t_shirt.png" alt="img">
+          </div>
+          <div class="title">
+            <h3>T-shirt</h3>
+            <p>₹300</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-slide">
+        <div class="hot-product box-shadow radius-10 bg-color">
+          <div class="img_box">
+            <img src="images/t_shirt.png" alt="img">
+          </div>
+          <div class="title">
+            <h3>T-shirt</h3>
+            <p>₹300</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <a class="right_arrow"><i class="fas fa-caret-right"></i></a>
+
+  </div>
+
+  <!-- /* ============================= Top Collection =================== */ -->
+  <div class="top_collection_container">
+    <h1>Top Collection</h1>
+    <div class="collection_product">
+
+      <div class="collection_item product_slide_card ">
+
+        <div class="img_box">
+          <img src="images/t_shirt.png" alt="img">
+        </div>
+        <div class="title">
+          <h3>T-shirt</h3>
+          <p>₹300</p>
+        </div>
+      </div>
+
+      <div class="collection_item product_slide_card ">
+
+        <div class="img_box">
+          <img src="images/t_shirt.png" alt="img">
+        </div>
+        <div class="title">
+          <h3>T-shirt</h3>
+          <p>₹300</p>
+        </div>
+      </div>
+
+      <div class="collection_item product_slide_card ">
+
+        <div class="img_box">
+          <img src="images/t_shirt.png" alt="img">
+        </div>
+        <div class="title">
+          <h3>T-shirt</h3>
+          <p>₹300</p>
+        </div>
+      </div>
+
+      <div class="collection_item product_slide_card ">
+
+        <div class="img_box">
+          <img src="images/t_shirt.png" alt="img">
+        </div>
+        <div class="title">
+          <h3>T-shirt</h3>
+          <p>₹300</p>
+        </div>
+      </div>
+      <div class="collection_item product_slide_card ">
+
+        <div class="img_box">
+          <img src="images/t_shirt.png" alt="img">
+        </div>
+        <div class="title">
+          <h3>T-shirt</h3>
+          <p>₹300</p>
+        </div>
+      </div>
+      <div class="collection_item product_slide_card ">
+
+        <div class="img_box">
+          <img src="images/t_shirt.png" alt="img">
+        </div>
+        <div class="title">
+          <h3>T-shirt</h3>
+          <p>₹300</p>
+        </div>
+      </div>
+      <div class="collection_item product_slide_card ">
+
+        <div class="img_box">
+          <img src="images/t_shirt.png" alt="img">
+        </div>
+        <div class="title">
+          <h3>T-shirt</h3>
+          <p>₹300</p>
+        </div>
+      </div>
+      <div class="collection_item product_slide_card ">
+
+        <div class="img_box">
+          <img src="images/t_shirt.png" alt="img">
+        </div>
+        <div class="title">
+          <h3>T-shirt</h3>
+          <p>₹300</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- //////////////////////////////// === Slick Slider Java Script === //////////////////////////////// -->
+
+  <script src="../jquery/jquery.min.js"></script>
+  <script src="../slick js/slick.min.js"></script>
+<!-- ========================Login Form======================== -->
+<script>
+  const logi =document.querySelector("#logpage");
+  const regi =document.querySelector("#regpage");
+  const otp =document.querySelector("#Otppage");
+
+  function togglelogin(){
+
+    logi.classList.remove('hide');
+    otp.classList.add('hide');
+    regi.classList.add('hide')
+  }
+   function toggleregister(){
+    logi.classList.add('hide');
+    otp.classList.remove('hide');
+  }
+   function toggleOtp(){
+    logi.classList.add('hide');
+    regi.classList.remove('hide');
+    otp.classList.add('hide');
+
+  }
+
+
+
+</script>
+
+  <script>
+    $('.newly_item').slick({
+      dots: false,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      arrows: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+
+      ]
+    });
+  </script>
+  
+    <script>
+      $('.slider_t-shirt').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 3,
+        arrows: true,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+  
+        ]
+      });
+    </script>
+
+  <!-- /////////////////////////////////// === Java Script === //////////////////////////////////// -->
+
+  <!-- ========================Search Functions====================== -->
+<script src="scriptSearch.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+
+  <!-- ========================PopUp Model====================== -->
+<script src="scriptLogin.js"></script>
+  <!-- <script>
+    const popup = document.getElementById('popup');
+    const overlay = document.getElementById('overlay');
+
+    function openPopUp() {
+      popup.classList.add('open-popup');
+      overlay.classList.add('visibilty-v');
+
+    }
+
+    function closePopUp() {
+      popup.classList.remove('open-popup');
+      overlay.classList.remove('visibilty-v');
+
+    }
+
+  </script> -->
+</body>
+
+</html>

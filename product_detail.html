@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- =========================Custume Style========================== -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
+  <!-- =========================Font Awesome========================== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!-- =========================Google Font========================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,800;0,900;1,300&display=swap"
+    rel="stylesheet" />
+  <!-- =========================Slick Slider========================== -->
+  <link rel="stylesheet" href="slick_css/slick.css" />
+  <link rel="stylesheet" href="slick_css/slick-theme.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  
+
+  <title>Kala Achor - Home</title>
+</head>
+
+  <body>
+    <!-- ----------- Header -------------- -->
+    <div class="akc_header mob-none">
+      <div class="getfunc  brand_logo">
+        <a href="../Home_page/index.html"><img src="images/logo.png" alt="Logo" /></a>
+      </div>
+      <div class="getfunc links">
+        <a href="#" class="link">Home</a>
+        <a href="#" class="link">Weman Products</a>
+        <a href="#" class="link">Blogs</a>
+      </div>
+      <span class="getback">
+        <i onclick="closes()" class="fa-sharp fa-solid fa-arrow-left arro hide z-9"></i>
+      </span>
+      <div class="search_btn getsearch" onclick="searchfull()">
+        <span>
+          <i class="fa-sharp fa-solid fa-magnifying-glass srch "></i>
+        </span>
+        <input type="text" placeholder="Search Here" id="inoutbox" />
+        <span><i class="fa-sharp fa-solid fa-close close hide"></i></span>
+
+      </div>
+
+      <div class="getfunc right_link_logo">
+        <a href="../Home_page/cart.html#"><i class="fa-solid fa-cart-shopping H_cart_btn"></i></a>
+        <a href="../Home_page/wishlist.html#"><i class="fa-solid fa-heart"></i></a>
+      </div>
+      <div class="getfunc user_profile hide">
+        <a href="../Home Page/dashbord.html">
+          <img
+            src="https://3.bp.blogspot.com/-kdlF5AdkRfw/WTaHz7uBeAI/AAAAAAAAMMA/lgPnfnqjtGcRJYOzaYCoiPsgGJD9Gh6dgCLcB/s1600/1415352366Neha-Kakkar-Singer-.jpg"
+            alt="user_profile" />
+        </a>
+      </div>
+      <!-- ===================Login Btn============ -->
+      <button type="button" onclick="openPopUp()" class="getfunc Btn Btn-black m-r-1">Login</button>
+    </div>
+
+    <div class="mob-header pc-none">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-3">
+            <div class="icon">
+              <img src="images/icon.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="logo">
+              <img src="images/logo.png" alt="">
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="rg-nme">
+              <button type="button" onclick="openPopUp()" class="getfunc Btn Btn-black m-r-1">Login</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    </div>
+
+    <!-- /* ============================= Pop Up model =================== */ -->
+    <div id="overlay" onclick="closePopUp()" class="overlay"></div>
+
+    <div id="popup" class="popup-content">
+      <span class="close-btn" onclick="closePopUp()"><i class="fa-solid fa-xmark"></i></span>
+      <div class="login">
+        <div class="left_logo_box">
+          <div class="logo_leyer_1">
+            <img src="images/logo.png" alt="logo">
+
+          </div>
+        </div>
+        <div class="right_form_box">
+
+          <div class="form_box">
+            <div class="log-reg-btn_box">
+              <button onclick="togglelogin()">Login</button>
+              <button onclick="toggleregister()">Register</button>
+            </div>
+
+            <form id="logpage" class="" action="">
+              <div class="input_box">
+                <input type="text" required>
+                <label for="username">Email / Phone</label>
+              </div>
+              <div class="input_box">
+                <input type="text" required>
+                <label for="username">Password</label>
+              </div>
+
+              <div class="input_box">
+                <button class="Btn Btn-blue" type="submit">Login</button>
+              </div>
+            </form>
+
+            <form id="Otppage" class="hide" action="">
+              <div class="input_box">
+                <input type="text" required>
+                <label for="username">Email / Phone</label>
+              </div>
+              <div class="input_box">
+                <button class="Btn Btn-blue" type="button" onclick="toggleOtp()">Get OTP</button>
+              </div>
+            </form>
+
+            <form id="regpage" class="hide" action="">
+              <div class="input_box">
+                <input type="text" required>
+                <label for="username">OTP</label>
+              </div>
+
+              <div class="input_box">
+                <input type="password" required>
+                <label for="username">Password</label>
+              </div>
+
+              <div class="input_box">
+                <input type="text" required>
+                <label for="username">Confirm Password</label>
+              </div>
+
+              <div class="input_box">
+                <button class="Btn Btn-blue" type="submit">Submit</button>
+              </div>
+            </form>
+
+          </div>
+
+
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <div class="akch-container  h-48">
+      <!-- ----------- single_Img_box -------------- -->
+      <div class="main_container">
+        <div class="Single_box_container">
+          <!-- ------------product_infformation------------- -->
+          <div class="product_inffo mob_hide">
+            <h1>BELEAVE</h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam
+              omnis provident quaerat explicabo, suscipit impedit eos placeat
+            </p>
+            <div class="img_slider_option">
+              <!-- <div class="img_mini"> -->
+              <div class="img_box setActive product_active">
+                <img class="image b a" src="images/t_shirt.png" alt="Img" />
+              </div>
+              <div class="img_box setActive ">
+                <img class="image b a" src="images/t_shirt.png" alt="Img" />
+              </div>
+
+              <div class="img_box setActive ">
+                <img class="image b a" src="images/t_shirt.png" alt="Img" />
+              </div>
+              <div class="img_box setActive ">
+                <img class="image b a" src="images/t_shirt.png" alt="Img" />
+              </div>
+
+
+              <!-- </div> -->
+
+            </div>
+          </div>
+          <!-- ---------------main_img_box----------------- -->
+          <div class="main_img_box">
+            <img class="image_box " src="images/t_shirt.png" alt="img" />
+            <h2>₹400 <span>₹700</span></h2>
+            <span class="span">45%<br />
+              off</span>
+          </div>
+          <div class="color_group mob_color_group">
+            <a href="#" class=" color black circle_active"></a>
+            <a href="#" class=" color pink"></a>
+            <a href="#" class=" color nimy_blue"></a>
+            <a href="#" class=" color white"></a>
+          </div>
+
+          <div class="img_slider_option disn ">
+            <!-- <div class="img_mini"> -->
+            <div class="img_box  Slide_img_box  setActive product_active">
+              <img class="image b a" src="images/t_shirt.png" alt="Img" />
+            </div>
+            <div class="img_box Slide_img_box  setActive ">
+              <img class="image b a" src="images/t_shirt.png" alt="Img" />
+            </div>
+
+            <div class="img_box Slide_img_box  setActive ">
+              <img class="image b a" src="images/t_shirt.png" alt="Img" />
+            </div>
+            <div class="img_box Slide_img_box  setActive ">
+              <img class="image b a" src="images/t_shirt.png" alt="Img" />
+            </div>
+
+            <div class="img_box Slide_img_box  setActive ">
+              <img class="image b a" src="images/t_shirt.png" alt="Img" />
+            </div>
+            <div class="img_box Slide_img_box  setActive ">
+              <img class="image b a" src="images/t_shirt.png" alt="Img" />
+            </div>
+
+            <div class="img_box Slide_img_box  setActive ">
+              <img class="image b a" src="images/t_shirt.png" alt="Img" />
+            </div>
+            <div class="img_box  Slide_img_box setActive ">
+              <img class="image b a" src="images/t_shirt.png" alt="Img" />
+            </div>
+
+
+            <!-- </div> -->
+
+          </div>
+
+          <!-- ---------------Custmize_Options-------------- -->
+          <div class="custmize_option mob_hide">
+            <div class="starts">
+              <h5>Review</h5>
+            </div>
+            <div class="color_group">
+              <h5>Color</h5>
+              <a href="#" class=" color black circle_active"></a>
+              <a href="#" class=" color pink"></a>
+              <a href="#" class=" color nimy_blue"></a>
+              <a href="#" class=" color white"></a>
+            </div>
+            <div class="Size">
+              <h5>Size</h5>
+              <a class="size size_active" href="#">S</a>
+              <a class="size " href="#">M</a>
+              <a class="size " href="#">L</a>
+              <a class="size " href="#">XL</a>
+            </div>
+            <div class="quantity">
+              <h5>Quantity</h5>
+              <div class="input_btn">
+                <i class=" negative fa-sharp fa-solid fa-circle-minus"></i>
+                <input type="text" class="quaintity" value="" />
+                <i class=" positive fa-sharp fa-solid fa-circle-plus"></i>
+              </div>
+            </div>
+            <div class="btn_group">
+              <button class="Btn Btn-blue">Add to Cart</button>
+              <button class="Btn Btn-black">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cnt-strt" id="prod-sect">
+      <div class="bottom_model_detail hide mob_dis_b">
+
+        <div class="mob_wishlist">
+          <i class="fa-solid fa-heart"></i>
+
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 392" fill="none">
+          <path
+            d="M0 20C0 8.9543 8.95431 0 20 0H128.616C136.965 0 144.347 5.29341 148.902 12.2902C154.493 20.879 163.723 30.8169 176.5 30.8169C189.021 30.8169 197.827 21.2728 203.174 12.8074C207.745 5.57038 215.255 0 223.815 0H340C351.046 0 360 8.95431 360 20V382C360 393.046 351.046 402 340 402H20C8.95432 402 0 393.046 0 382V20Z"
+            fill="#fff" />
+        </svg>
+
+        <div class="mob_inff prod-dtl ">
+
+          <div class="mob_top_heading " id="tp-prod">
+            <a class="prod_actv prod-btn">Details</a>
+            <a class="prod-btn">Reviews</a>
+
+          </div>
+
+          <div class="akch-prod-dtls  akch-prod-sect prod_actv " id="details">
+
+            <div class="mob_title">
+              <h2>Believe : Poly Corton</h2>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="mob_size_quantity">
+                <div class="Size">
+                  <a class="size size_active" href="#">S</a>
+                  <a class="size " href="#">M</a>
+                  <a class="size " href="#">L</a>
+                  <a class="size " href="#">XL</a>
+                </div>
+                <div class="quantity">
+                  <div class="input_btn">
+                    <i class=" negative fa-sharp fa-solid fa-circle-minus"></i>
+                    <input type="text" class="quaintity" value="" />
+                    <i class=" positive fa-sharp fa-solid fa-circle-plus"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mob_discription">
+                <p>Believe : Poly Cotton Lorem ipsum dolor sit amet.</p>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="akch-prod-rvw akch-prod-sect" id="reviews">
+
+            <div class="container-fluid">
+              <div class="rat-bx">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="rt-nmb">
+                      <p class="lft-lg-rt">4.0/5</p>
+                      <p class="lft-rat-txt">Based on 120 Reviews</p>
+                      <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="all-rat">
+                      <div class="rates">
+                        <p>5 Star </p><img src="images/Frame (2).png" alt="">
+
+                      </div>
+                      <div class="rates">
+                        <p>4 Star </p><img src="images/Frame (2).png" alt="">
+
+                      </div>
+
+                      <div class="rates">
+                        <p>3 Star </p><img src="images/Frame (2).png" alt="">
+
+                      </div>
+
+
+                      <div class="rates">
+                        <p>2 Star </p><img src="images/Frame (2).png" alt="">
+
+                      </div>
+
+                      <div class="rates">
+                        <p>1 Star </p><img src="images/Frame (2).png" alt="">
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rvw-sect" id="add_rvw">
+                <hr>
+                <div class="add-rvw">
+                  <a onclick="add_rvw()">
+                    <div class="row">
+                      <div class="col-10">
+                        <img class="rvw-img" src="images/rvw.png" alt="">Add Reviews
+
+                      </div>
+                      <div class="col-2">
+                        <img src="images/rgh.png" alt="">
+                      </div>
+
+                    </div>
+
+                  </a>
+                </div>
+                <hr>
+              </div>
+              <div class="usr-rvw">
+                <div class="row scrl-rvw" id="scrl-hr">
+                  <div class="col-7">
+                    <h5>User Review</h5>
+                  </div>
+                  <div class="col-5 none" id="nne_rvw">
+                    <a onclick="add_rvw()">Add Review</a>
+                  </div>
+                </div>
+                <div class="usr-rvw-itm">
+                  <div class="usr-rvw-bx">
+                    <div class="row">
+                      <div class="col-7">
+                        <div class="usr-nme">
+                          <i class="fa-solid fa-user"></i> <span>Piyush Maurya</span>
+                        </div>
+
+                      </div>
+                      <div class="col-5">
+                        <div class="rating">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia harum cupiditate quas sapiente
+                      neque
+                      impedit sit, modi labore alias. Voluptatibus?</p>
+                  </div>
+                  <div class="usr-rvw-bx">
+                    <div class="row">
+                      <div class="col-7">
+                        <div class="usr-nme">
+                          <i class="fa-solid fa-user"></i> <span>Piyush Maurya</span>
+                        </div>
+
+                      </div>
+                      <div class="col-5">
+                        <div class="rating">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia harum cupiditate quas sapiente
+                      neque
+                      impedit sit, modi labore alias. Voluptatibus?</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+         
+
+          <div class="mob_bottom_menuBar " style="background-color: transparent;">
+            <div class="left_nav_btnGroup">
+              <div class="mob_link ">
+                <p>₹ 5003</p>
+              </div>
+
+              <div class="mob_link  ">
+                <button class="Btn Btn_curve add-crt Btn-black">Add to Cart</button>
+                <button class="Btn Btn_curve by-nw Btn-black">Buy Now</button>
+              </div>
+
+            </div>
+            <div class="mob_search_btn" onclick="searchfull()">
+              <i class="fa-sharp fa-solid fa-search"></i>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="add-rvw-sect none" id="rev-sect">
+      <div class="container">
+        <div class="add-rvw-tp">
+
+
+
+          <a onclick="back()"><i class="fa-solid fa-arrow-left"></i></a>
+          Add Review
+
+
+        </div>
+      </div>
+      <div class="add-rvw-btm ">
+        <form action="" method="post">
+          <div class="chs-rat">
+            <p>Your Overall rating of this product</p>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <div class="add-inp">
+            <p class="inp-bld ">What did you like or dislike?</p>
+            <p class="inp-lgh">Write your review</p>
+            <textarea type="text" class="form-input"></textarea>
+
+          </div>
+
+          <div class="rvw-sub">
+            <button class=" sbm-rvw">Submit Review</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+    </div>
+    </div>
+
+
+    </div>
+    <!-- ----------- Recent View Products -------------- -->
+
+
+    <div class="newly_arrived_continer">
+      <h1>Recently View</h1>
+      <div class="newly_item">
+
+        <div class="product_slide_card ">
+          <div class="price">
+            <h4>₹1200</h4>
+            <span>₹1100</span>
+          </div>
+          <div class="img_box">
+            <img src="images/t_shirt.png" alt="img">
+          </div>
+          <div class="title">
+            <h3>T-shirt</h3>
+            <p>34%<span>off</span></p>
+          </div>
+        </div>
+
+        <div class="product_slide_card">
+          <div class="price">
+            <h4>₹300</h4>
+            <span>₹700</span>
+          </div>
+          <div class="img_box">
+            <img src="images/t_shirt.png" alt="img">
+          </div>
+          <div class="title">
+            <h3>T-shirt</h3>
+            <p>34%<span>off</span></p>
+          </div>
+        </div>
+
+        <div class="product_slide_card">
+          <div class="price">
+            <h4>₹300</h4>
+            <span>₹700</span>
+          </div>
+          <div class="img_box">
+            <img src="images/t_shirt.png" alt="img">
+          </div>
+          <div class="title">
+            <h3>T-shirt</h3>
+            <p>34%<span>off</span></p>
+          </div>
+        </div>
+
+        <div class="product_slide_card">
+          <div class="price">
+            <h4>₹300</h4>
+            <span>₹700</span>
+          </div>
+          <div class="img_box">
+            <img src="images/t_shirt.png" alt="img">
+          </div>
+          <div class="title">
+            <h3>T-shirt</h3>
+            <p>34%<span>off</span></p>
+          </div>
+        </div>
+
+        <div class="product_slide_card">
+          <div class="price">
+            <h4>₹300</h4>
+            <span>₹700</span>
+          </div>
+          <div class="img_box">
+            <img src="images/t_shirt.png" alt="img">
+          </div>
+          <div class="title">
+            <h3>T-shirt</h3>
+            <p>34%<span>off</span></p>
+          </div>
+        </div>
+
+        <div class="product_slide_card">
+          <div class="price">
+            <h4>₹300</h4>
+            <span>₹700</span>
+          </div>
+          <div class="img_box">
+            <img src="images/t_shirt.png" alt="img">
+          </div>
+          <div class="title">
+            <h3>T-shirt</h3>
+            <p>34%<span>off</span></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- /////////////////////////////////// === Java Script === //////////////////////////////////// -->
+    <!-- //////////////////////////////// === Slick Slider Java Script === //////////////////////////////// -->
+    <script src="scriptSearch.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+      $('.newly_item').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: true,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+
+        ]
+      });
+    </script>
+    <script>
+      $('.img_slider_option').slick({
+        infinite: false,
+        speed: 300,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: false,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1
+            }
+          }
+
+        ]
+      });
+    </script>
+
+
+
+
+    <script>
+
+
+      // ==========================Quantity Btn Functions =========================
+
+      const plus = document.querySelector(".positive"),
+        minum = document.querySelector(".negative"),
+        num = document.querySelector(".quaintity");
+
+      let value = '01';
+      num.value = value;
+
+      num.addEventListener('change', () => {
+        value = num.value;
+      });
+
+      plus.addEventListener("click", () => {
+        value++;
+        value = (value < 10) ? "0" + value : value; num.value = value;
+      }); minum.addEventListener("click", () => {
+        if (value > 1) {
+          value--;
+          value = (value < 10) ? "0" + value : value; num.value = value;
+        }
+      })
+      const main_img = document.querySelector('.image_box'); const
+        setActive = document.querySelectorAll('.setActive'); const images = document.querySelectorAll('.b'); const
+          img = document.querySelectorAll('.a'); const colors = document.querySelectorAll('.color');
+      const sizes = document.querySelectorAll('.size'); const links = document.querySelectorAll('.link');
+      setActive.forEach((Box, index) => {
+        Box.addEventListener('click', () => {
+          setActive.forEach(box => box.classList.remove('product_active'));
+          Box.classList.add('product_active');
+        });
+
+      });
+      // ==========================Color add active =========================
+
+      colors.forEach((color, index) => {
+        color.addEventListener('click', () => {
+          colors.forEach(clr => clr.classList.remove('circle_active'));
+          color.classList.add('circle_active');
+        });
+      });
+      // ==========================Size add active =========================
+      sizes.forEach((size, index) => {
+        size.addEventListener('click', () => {
+          sizes.forEach(clr => clr.classList.remove('size_active'));
+          size.classList.add('size_active');
+        });
+      });
+      // ==========================Link Header add active =========================
+
+      links.forEach((link, index) => {
+        link.addEventListener('click', () => {
+          links.forEach(clr => clr.classList.remove('active'));
+          link.classList.add('active');
+        });
+      });
+
+
+    </script>
+    <!-- ========================Search Functions====================== -->
+
+    <script>
+      const search = document.querySelector('.getsearch');
+      const clears = document.querySelector('.close');
+      const getback = document.querySelector('.getback');
+      const searchIcon = document.querySelector('.srch');
+      const arrowIcon = document.querySelector('.arro');
+      const inoutbox = document.querySelector('#inoutbox');
+      const getFuncClasses = document.querySelectorAll('.getfunc');
+
+      function searchfull() {
+        getFuncClasses.forEach((fcl) => {
+          fcl.classList.add('hide');
+        });
+        search.classList.add('wh-100');
+        clears.classList.remove('hide');
+        searchIcon.classList.add('hide');
+        arrowIcon.classList.remove('hide');
+        getback.classList.add('back_arrow');
+      }
+
+      clears.addEventListener('click', () => {
+        inoutbox.value = '';
+      })
+      function closes() {
+        search.classList.remove('wh-100');
+        search.classList.remove('dis-f');
+        clears.classList.add('hide');
+        getFuncClasses.forEach((fcl) => {
+          fcl.classList.remove('hide');
+          arrowIcon.classList.add('hide');
+          getback.classList.remove('back_arrow')
+
+        });
+
+      }
+
+    </script>
+
+
+    <!-- ========================Login Form======================== -->
+    <script>
+      const logi = document.querySelector("#logpage");
+      const regi = document.querySelector("#regpage");
+      const otp = document.querySelector("#Otppage");
+
+      function togglelogin() {
+
+        logi.classList.remove('hide');
+        otp.classList.add('hide');
+        regi.classList.add('hide')
+      }
+      function toggleregister() {
+        logi.classList.add('hide');
+        otp.classList.remove('hide');
+      }
+      function toggleOtp() {
+        logi.classList.add('hide');
+        regi.classList.remove('hide');
+        otp.classList.add('hide');
+
+      }
+
+
+
+    </script>
+
+    <!-- ========================PopUp Model====================== -->
+
+    <script>
+      const popup = document.getElementById('popup');
+      const overlay = document.getElementById('overlay');
+
+      function openPopUp() {
+        popup.classList.add('open-popup');
+        overlay.classList.add('visibilty-v');
+
+      }
+
+      function closePopUp() {
+        popup.classList.remove('open-popup');
+        overlay.classList.remove('visibilty-v');
+
+      }
+    </script>
+
+
+
+    <script>
+      var mobLink = document.querySelectorAll('.mob_link');
+      var getsearch = document.querySelector('.getsearch');
+      var mobSearchBtn = document.querySelector('.mob_search_btn');
+
+      mobSearchBtn.addEventListener('click', () => {
+        getsearch.classList.add('dis-f');
+      })
+
+    </script>
+
+
+    <script>
+      // Hide all tab contents and remove the active class from all buttons
+      const tabs = document.querySelectorAll('.mob_top_heading a');
+      const tabContents = document.querySelectorAll('.akch-prod-sect');
+
+
+      tabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => {
+
+          tabs.forEach((tab) => tab.classList.remove("prod_actv"));
+
+          tab.classList.add("prod_actv");
+
+          tabContents.forEach((c) => c.classList.remove('prod_actv'));
+
+
+          tabContents[index].classList.add("prod_actv")
+        });
+      });
+
+      tabs[0].click();
+
+      function add_rvw() {
+        const prod_sect = document.getElementById("prod-sect");
+        const add_rvw = document.getElementById("rev-sect");
+        add_rvw.classList.remove("none");
+        prod_sect.classList.add("none");
+      }
+
+      function back() {
+        const prod_sect = document.getElementById("prod-sect");
+        const add_rvw = document.getElementById("rev-sect");
+        add_rvw.classList.add("none");
+        prod_sect.classList.remove("none");
+
+      }
+
+    </script>
+
+
+    <script>
+      window.addEventListener('scroll', function () {
+        const reviews = document.getElementById('reviews');
+        const add_rvw = document.getElementById('add_rvw');
+        const scrl_rvw = document.getElementById('scrl-hr');
+        const nne_rvw = document.getElementById('nne_rvw');
+        const scrollPosition = window.scrollY;
+
+        // Adjust the height at which the element becomes fixed (e.g., 300px)
+        const fixedHeight = 330;
+
+        if (scrollPosition >= fixedHeight) {
+          reviews.style.position = 'fixed';
+          reviews.style.top = '163px';
+          add_rvw.classList.add('none');
+          scrl_rvw.classList.add('rvw-hr')
+
+          nne_rvw.classList.remove('none');
+        } else {
+          reviews.style.position = 'absolute';
+
+          add_rvw.classList.remove('none');
+          nne_rvw.classList.add('none');
+          scrl_rvw.classList.remove('rvw-hr');
+
+          reviews.style.top = '31px'; // Initial top position when not fixed
+        }
+      });
+
+    </script>
+
+
+    <!-- /////////////////////////////////// === Slick Slider === //////////////////////////////////// -->
+
+
+
+
+  </body>
+
+</html>
