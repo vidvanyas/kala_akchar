@@ -2104,6 +2104,7 @@
     .tlt-prc-checkbx p{
         margin-bottom: 5px !important;
     }
+    
     .bck-check{
         border: 1px solid #000;
         border-radius: 10px;
@@ -2111,7 +2112,7 @@
         color: #000;
         padding: 7px 15px;
     }
-    .procd-btn{
+    .check-pst-fxd{
         position: fixed;
         background-color: #fff;
         bottom: 0;
