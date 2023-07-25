@@ -142,7 +142,7 @@
 
                     <div class="check-btm-bx">
                         <div class="chck-add-tlt">
-                            <h4>Address</h4>
+                            <button onclick="bck('add_adrs')"><i class="fa-solid fa-arrow-left"></i> </button>    <h4>Address</h4>
                         </div>
 
                         <div class="check-add-frm">
@@ -458,9 +458,11 @@ function bck(backCnt){
     const addr_btn=document.getElementById('addr_btn');
         const pymt_btn=document.getElementById('pymt_btn');
         const smry_btn=document.getElementById('smry_btn');
-        const payment=document.getElementById('payment')
-        const summary=document.getElementById('summary')
-        const address=document.getElementById('address')
+        const payment=document.getElementById('payment');
+        const summary=document.getElementById('summary');
+        const address=document.getElementById('address');
+        const add_address=document.getElementById('add_address');
+        
 if(backCnt=='addrs'){
     smry_btn.classList.remove('check_active')
     addr_btn.classList.add('check_active')
@@ -479,6 +481,14 @@ if(backCnt=='close'){
     payment.classList.add('none');
         summary.classList.remove('smry-blr');
         address.classList.add('none');
+}
+if(backCnt=='add_adrs'){
+    address.classList.remove('none')
+    add_address.classList.add('none')
+    
+        payment.classList.add('none');
+        summary.classList.add('none');
+        address.classList.remove('none');
 }
 
 }
