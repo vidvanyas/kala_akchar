@@ -67,19 +67,19 @@
                         <div class="row">
                             <div class="col-4">
                                 <div class="chek-tp-box">
-                                    <a href="">Address</a>
+                                    <a class="check-tab check_active" id="addr_btn" >Address</a>
 
                                 </div>
                             </div>
                             <div class="col-4">
-                                <div class="chek-tp-box active">
-                                    <a href="">Summary</a>
+                                <div class="chek-tp-box ">
+                                    <a class="check-tab" id="smry_btn" >Summary</a>
 
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="chek-tp-box">
-                                    <a href="">Payment</a>
+                                    <a class="check-tab"  id="pymt_btn" >Payment</a>
 
                                 </div>
                             </div>
@@ -87,7 +87,7 @@
                     </div>
                 </div>
 
-                <div class="check-slct-add mob-none">
+                <div class=" check-slct-add " id="address">
                     <div class="container">
                         <div class="slct-add-tlt">
                             Select Address
@@ -128,9 +128,17 @@
                             </div>
 
                         </div>
+
+                        <div class="add-address-btn">
+                            <a onclick="add_adrs()">Add Address</a>
+                        </div>
+
+                        <div class="adr-nxt">
+                            <button class="" onclick="check_next('smry')">Next </button>
+                        </div>
                     </div>
                 </div>
-                <div class="mob-check-add  mob-none" id="add_address">
+                <div class=" mob-check-add none" id="add_address">
 
                     <div class="check-btm-bx">
                         <div class="chck-add-tlt">
@@ -196,7 +204,7 @@
                     </div>
                 </div>
 
-                <div class="check-smry mob-none">
+                <div class=" check-smry  none" id="summary">
                     <div class="container">
                         <div class="check-prod-smry">
                             <div class="smry-box">
@@ -335,13 +343,13 @@
 
                                     <div class="col-6">
                                         <div class="mob-bck">
-                                            <button class="bck-check">Back</button>
+                                            <button class="bck-check" onclick="bck('addrs')">Back</button>
                                         </div>
                                     </div>
 
                                     <div class="col-6">
                                         <div class="mob-procd">
-                                            <button class="procd-check">Proceed to Pay</button>
+                                            <button class="procd-check" onclick="check_next('pay')">Proceed to Pay</button>
                                         </div>
                                     </div>
                                 </div>
@@ -350,21 +358,33 @@
                     </div>
                 </div>
 
-                <div class="check-paymnt">
+                <div class=" check-paymnt none" id="payment">
                     <div class="clse-pmt">
 
-                        <i class="fa-solid fa-xmark"></i>
+                       <button onclick="bck('close')"> <i class="fa-solid fa-xmark"></i></button>
                     </div>
                     <h6>Select Payment Option</h6>
                     <div class="mob-pmt-opt">
                         <form action="" method="post">
                             <div class="pmt-form">
                                 <label for="online"><i class="fa-regular fa-credit-card"></i>Online</label>
-                                <input name="one" class="check-rad" type="radio">
+                                <input name="pmt_method" value="online" class="check-rad" type="radio" checked>
+                                <br>
+
+
                             </div>
-                            <div class="pmt-form">
+                            <div class="pmt-form cod">
+
+
                                 <label for="online"><i class="fa-solid fa-truck"></i>COD</label>
-                                <input name="one" class="check-rad" type="radio">
+                                <input name="pmt_method" value="cod" class="check-rad" type="radio">
+                                <div class="cod-cnt none" id="cod_cnt">
+                                    <p>Do you know you get an extra 5% off when you pay online</p>
+                                </div>
+                            </div>
+
+                            <div class="pmt-form">
+
                             </div>
                             <div class="check-pmt-btn">
                                 <button class="pmt-btn">Pay (₹2300)</button>
@@ -381,8 +401,134 @@
 
 
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const radioButtons = document.getElementsByName('pmt_method');
+                const cod_cnt = document.getElementById('cod_cnt');
 
-        <script src="../Home_page/script.js"></script>
+                for (const radioButton of radioButtons) {
+                    radioButton.addEventListener('change', function () {
+                        if (this.checked) {
+                            if (this.value == 'cod') {
+                                cod_cnt.classList.remove('none');
+
+                            }
+                            if (this.value == 'online') {
+                                cod_cnt.classList.add('none');
+
+                            }
+
+
+                        }
+                    });
+                }
+            });
+
+        </script>
+
+<script>
+    function check_next(checkCnt){
+        const addr_btn=document.getElementById('addr_btn');
+        const pymt_btn=document.getElementById('pymt_btn');
+        const smry_btn=document.getElementById('smry_btn');
+        const payment=document.getElementById('payment')
+        const summary=document.getElementById('summary')
+        const address=document.getElementById('address')
+if(checkCnt=='pay'){
+    smry_btn.classList.remove('check_active')
+    pymt_btn.classList.add('check_active')
+    
+        payment.classList.remove('none');
+        summary.classList.add('smry-blr');
+        address.classList.add('none');
+        
+
+
+}
+if(checkCnt=='smry'){
+    addr_btn.classList.remove('check_active')
+    smry_btn.classList.add('check_active')
+    payment.classList.add('none');
+        summary.classList.remove('none');
+        address.classList.add('none');
+}
+    }
+
+function bck(backCnt){
+    const addr_btn=document.getElementById('addr_btn');
+        const pymt_btn=document.getElementById('pymt_btn');
+        const smry_btn=document.getElementById('smry_btn');
+        const payment=document.getElementById('payment')
+        const summary=document.getElementById('summary')
+        const address=document.getElementById('address')
+if(backCnt=='addrs'){
+    smry_btn.classList.remove('check_active')
+    addr_btn.classList.add('check_active')
+    
+        payment.classList.add('none');
+        summary.classList.add('none');
+        address.classList.remove('none');
+        
+
+
+}
+
+if(backCnt=='close'){
+    pymt_btn.classList.remove('check_active')
+    smry_btn.classList.add('check_active')
+    payment.classList.add('none');
+        summary.classList.remove('smry-blr');
+        address.classList.add('none');
+}
+
+}
+</script>
+        <script>
+            // function checkTab(checkId) {
+            //     // Hide all tab contents
+            //     const checkCnt = document.getElementsByClassName('check-cnt');
+            //     const add_adr = document.getElementById("add_address");
+            //     const addrs = document.getElementById("address");
+                
+            //     for (const content of checkCnt) {
+            //         content.style.display = 'none';
+            //     }
+
+            //     // Remove the "active" class from all tab buttons
+            //     const checkTab = document.getElementsByClassName('check-tab');
+            //     for (const button of checkTab) {
+            //         button.classList.remove('check_active');
+                   
+
+            //     }
+
+            //     // Show the selected tab content and set the "active" class for the button
+            //     const selectedTab = document.getElementById(checkId);
+            //     if (selectedTab) {
+
+            //         selectedTab.style.display = 'block';
+                    
+            //     }
+
+            //     const activeTabButton = document.querySelector(`[onclick="checkTab('${checkId}')"]`);
+            //     if (activeTabButton) {
+            //         activeTabButton.classList.add('check_active');
+            //          add_adr.classList.add('none');
+                     
+            //     if(`[onclick="checkTab('${checkId}')"]`==`[onclick="checkTab('address')"]`){
+            //         addrs.classList.remove('none');
+
+            //     }
+            //     }
+            // }
+
+
+            // By default, display the first tab
+            // checkTab('address');
+
+        </script>
+
+        <script src="script.js"></script>
 
         <!-- <script>
         function addressPage() {
@@ -410,6 +556,19 @@
             dots[2].classList.add('navi_active');
         }
     </script> -->
+
+        <script>
+            function add_adrs() {
+                // alert('k')
+                const add_adr = document.getElementById("add_address");
+                const addrs = document.getElementById("address");
+                add_adr.classList.remove("none");
+                addrs.classList.add("none");
+                // add_adr.style.display='block'
+                // addrs.style.display='none'
+
+            }
+        </script>
 
 
     </body>

@@ -1,82 +1,469 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
     <head>
-        <title>Scroll and Fixed Two Sections Example</title>
-        <style>
-            body {
-                height: 2000px;
-                /* Set a tall content to enable scrolling */
-            }
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- =========================Custume Style========================== -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style2.css">
+        <!-- =========================Font Awesome========================== -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- =========================Google Font========================== -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-            .fixed-section {
-                position: absolute;
-                /* Start with absolute position */
-                width: 100%;
-                background-color: lightblue;
-                padding: 10px;
-            }
+        <!-- =========================Slick Slider========================== -->
+        <link rel="stylesheet" href="slick_css/slick.css" />
+        <link rel="stylesheet" href="slick_css/slick-theme.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css">
 
-            .section1 {
-                top: 100px;
-                /* Initial top position for section 1 */
-            }
 
-            .section2 {
-                top: 300px;
-                /* Initial top position for section 2 */
-            }
-
-            .content {
-                margin-top: 500px;
-                /* Add some margin to see the effect better */
-            }
-
-        </style>
+        <title>Kala Achor - Home</title>
     </head>
 
-    <body>
-        <div class="fixed-section section1">
-            <p>This is fixed section 1.</p>
-        </div>
+    <body class="akch-bg">
+        <div class="akch-container ">
+            <!-- ----------- Header -------------- -->
+            <div class="akc_header">
+                <div class="getfunc  brand_logo">
+                    <a href="index.html"><img src="images/logo.png" alt="Logo" /></a>
+                </div>
+                <div class="getfunc links">
+                    <a href="#" class="link">Home</a>
+                    <a href="#" class="link">Weman Products</a>
+                    <a href="#" class="link">Blogs</a>
+                </div>
+                <span class="getback">
+                    <i onclick="closes()" class="fa-sharp fa-solid fa-arrow-left arro hide z-9"></i>
+                </span>
+                <div class="search_btn getsearch" onclick="searchfull()">
+                    <span>
+                        <i class="fa-sharp fa-solid fa-magnifying-glass srch "></i>
+                    </span>
+                    <input type="text" placeholder="Search Here" id="inoutbox" />
+                    <span><i class="fa-sharp fa-solid fa-close close hide"></i></span>
 
-        <div class="fixed-section section2">
-            <p>This is fixed section 2.</p>
-        </div>
+                </div>
 
-        <div class="content">
-            <h2>Scroll Down</h2>
-            <p>Scroll down to see the sections fixed at certain heights.</p>
-        </div>
+                <div class="getfunc right_link_logo">
+                    <a href="../Home_page/cart.html#"><i class="fa-solid fa-cart-shopping H_cart_btn"></i></a>
+                    <a href="../Home_page/wishlist.html#"><i class="fa-solid fa-heart"></i></a>
+                </div>
+                <a href="../Home_page/dashbord.html">
+                    <div class="getfunc user_profile mob_dis_b ">
+                        <img src="https://3.bp.blogspot.com/-kdlF5AdkRfw/WTaHz7uBeAI/AAAAAAAAMMA/lgPnfnqjtGcRJYOzaYCoiPsgGJD9Gh6dgCLcB/s1600/1415352366Neha-Kakkar-Singer-.jpg"
+                            alt="user_profile" />
+                    </div>
+                </a>
 
+            </div>
+
+
+            <div class="mob-chc pc-none">
+                <div class="container">
+                    <div class="mob-check-tp">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="chek-tp-box">
+                                    <a class="check-tab check_active" onclick="checkTab('address')">Address</a>
+
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="chek-tp-box ">
+                                    <a class="check-tab" onclick="checkTab('summary')">Summary</a>
+
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="chek-tp-box">
+                                    <a class="check-tab" onclick="checkTab('payment')">Payment</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="check-cnt check-slct-add check_active" id="address">
+                    <div class="container">
+                        <div class="slct-add-tlt">
+                            Select Address
+                        </div>
+                        <div class="slect-add-bx slct">
+
+                            <div class="slect-add-nme">
+                                Piyush Maurya
+                                <div class="row">
+                                    <div class="col-10">
+                                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                        <p>+91 7985445887</p>
+                                    </div>
+
+                                    <div class="col-2 edt-img">
+                                        <a href=""><img src="images/edit.png" alt=""></a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="slect-add-bx ">
+
+                            <div class="slect-add-nme">
+                                Piyush Maurya
+                                <div class="row">
+                                    <div class="col-10">
+                                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                        <p>+91 7985445887</p>
+                                    </div>
+
+                                    <div class="col-2 edt-img">
+                                        <a href=""><img src="images/edit.png" alt=""></a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="add-address-btn">
+                            <a onclick="add_adrs()">Add Address</a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" mob-check-add none " id="add_address">
+
+                    <div class="check-btm-bx">
+                        <div class="chck-add-tlt">
+                            <h4>Address</h4>
+                        </div>
+
+                        <div class="check-add-frm">
+                            <form action="" method="post">
+                                <div class="check-add-inp">
+                                    <input type="text" class="form-control" placeholder="Full Name">
+                                </div>
+                                <div class="check-add-inp">
+                                    <input type="email" class="form-control" placeholder="Email Id">
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="check-add-inp">
+                                            <input class="form-control" type="tel" placeholder="Mobile Number">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="check-add-inp">
+                                            <input class="form-control" type="tel"
+                                                placeholder="Alternate Mobile Number">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="check-add-inp">
+                                            <input type="text" class="form-control" placeholder="Pin Code">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="check-add-inp">
+                                            <input type="text" class="form-control" placeholder="City">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slect-head">
+                                    <p>Select type of Address</p>
+
+                                    <div class="slect-typ-add">
+
+                                        <div class="add-bx active">
+                                            Home
+                                        </div>
+                                        <div class="add-bx">
+                                            College
+                                        </div>
+                                        <div class="add-bx">
+                                            Work
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="check-cnt check-smry" id="summary">
+                    <div class="container">
+                        <div class="check-prod-smry">
+                            <div class="smry-box">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="smry-img">
+                                            <img src="images/t_shirt.png" alt="">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-8">
+                                        <div class="prod-smry-dtl">
+                                            <h4>Lorem ipsum dolor sit.</h4>
+                                            <p>Amount: <span>₹200</span></p>
+                                            <p>Qty: <span>2</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="smry-box">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="smry-img">
+                                            <img src="images/t_shirt.png" alt="">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-8">
+                                        <div class="prod-smry-dtl">
+                                            <h4>Lorem ipsum dolor sit.</h4>
+                                            <p>Amount: <span>₹200</span></p>
+                                            <p>Qty: <span>2</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="smry-box">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="smry-img">
+                                            <img src="images/t_shirt.png" alt="">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-8">
+                                        <div class="prod-smry-dtl">
+                                            <h4>Lorem ipsum dolor sit.</h4>
+                                            <p>Amount: <span>₹200</span></p>
+                                            <p>Qty: <span>2</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="smry-box">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="smry-img">
+                                            <img src="images/t_shirt.png" alt="">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-8">
+                                        <div class="prod-smry-dtl">
+                                            <h4>Lorem ipsum dolor sit.</h4>
+                                            <p>Amount: <span>₹200</span></p>
+                                            <p>Qty: <span>2</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="check-add-smry">
+                            <div class="box-add">
+                                <div class="cust-nme">
+                                    Piyush Maurya
+                                    <p>Lorem ipsum dolor sit amet consectetur Lorem, ipsum.</p>
+                                    <p>+91 1234567891</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="check-pst-fxd">
+                        <div class="check-tlt-prc">
+                            <div class="tlt-prc-checkbx">
+
+                                <div class="container">
+                                    <h6> Price Details</h6>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="prc-lft-chck">
+                                                <p>Price (3 Items)</p>
+                                                <p>Discounts</p>
+                                                <p>Delivery Charge</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="prc-rgh-chck">
+                                                <p>₹1228</p>
+                                                <p>-₹12</p>
+                                                <p>₹50</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="check-tlt-amt">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                Total Amount
+                                            </div>
+                                            <div class="col-6 prc-rght">
+                                                ₹1378
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="procd-btn">
+                            <div class="container">
+                                <div class="row">
+
+                                    <div class="col-6">
+                                        <div class="mob-bck">
+                                            <button class="bck-check">Back</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <div class="mob-procd">
+                                            <button class="procd-check">Proceed to Pay</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="check-cnt check-paymnt" id="payment">
+                    <div class="clse-pmt">
+
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <h6>Select Payment Option</h6>
+                    <div class="mob-pmt-opt">
+                        <form action="" method="post">
+                            <div class="pmt-form">
+                                <label for="online"><i class="fa-regular fa-credit-card"></i>Online</label>
+                                <input name="pmt_method" value="online" class="check-rad" type="radio" checked>
+                                <br>
+
+
+                            </div>
+                            <div class="pmt-form cod">
+
+
+                                <label for="online"><i class="fa-solid fa-truck"></i>COD</label>
+                                <input name="pmt_method" value="cod" class="check-rad" type="radio">
+                                <div class="cod-cnt none" id="cod_cnt">
+                                    <p>Do you know you get an extra 5% off when you pay online</p>
+                                </div>
+                            </div>
+
+                            <div class="pmt-form">
+
+                            </div>
+                            <div class="check-pmt-btn">
+                                <button class="pmt-btn">Pay (₹2300)</button>
+                            </div>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+        </div>
         <script>
-            window.addEventListener('scroll', function () {
-                const scrollPosition = window.scrollY;
+            document.addEventListener('DOMContentLoaded', function () {
+                const radioButtons = document.getElementsByName('pmt_method');
+                const cod_cnt = document.getElementById('cod_cnt');
 
-                // Adjust the heights at which the sections become fixed
-                const fixedHeight1 = 100;
-                const fixedHeight2 = 100;
+                for (const radioButton of radioButtons) {
+                    radioButton.addEventListener('change', function () {
+                        if (this.checked) {
+                            if (this.value == 'cod') {
+                                cod_cnt.classList.remove('none');
 
-                const section1 = document.querySelector('.section1');
-                const section2 = document.querySelector('.section2');
+                            }
+                            if (this.value == 'online') {
+                                cod_cnt.classList.add('none');
 
-                if (scrollPosition >= fixedHeight1 && scrollPosition) {
-                    section1.style.position = 'fixed';
-                    section1.style.top = '10px';
-                } else {
-                    section1.style.position = 'absolute';
-                    section1.style.top = '100px'; // Initial top position when not fixed
-                }
+                            }
 
-                if (scrollPosition >= fixedHeight2) {
-                    section2.style.position = 'fixed';
-                    section2.style.top = '80px';
-                } else {
-                    section2.style.position = 'absolute';
-                    section2.style.top = '300px'; // Initial top position when not fixed
+
+                        }
+                    });
                 }
             });
-        </script>
-    </body>
 
-</html>
+        </script>
+
+       
+
+        <script src="script.js"></script>
+
+        <!-- <script>
+        function addressPage() {
+            var dots = document.getElementsByClassName('navi_dot');
+            dots[0].classList.add('navi_active');
+            dots[1].classList.remove('navi_active');
+            dots[2].classList.remove('navi_active');
+
+
+
+        }
+        function changePage() {
+            var dots = document.getElementsByClassName('navi_dot');
+            dots[0].classList.add('navi_active');
+            dots[1].classList.add('navi_active');
+            dots[2].classList.remove('navi_active');
+
+
+
+        }
+        function paymentPage() {
+            var dots = document.getElementsByClassName('navi_dot');
+            dots[0].classList.add('navi_active');
+            dots[1].classList.add('navi_active');
+            dots[2].classList.add('navi_active');
+        }
+    </script> -->
+
+        <script>
+            function add_adrs() {
+                const prod_sect = document.getElementById('prod-sect');
+                const add_rvw = document.getElementById('rev-sect');
+                // add_rvw.classList.remove("none");
+                // prod_sect.classList.add("none");
+                add_rvw.style.display='block'
+                prod_sect.style.display='none'
+
+            }
+        </script>
+
+
+    </body>
