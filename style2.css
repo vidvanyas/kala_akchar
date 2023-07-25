@@ -2003,6 +2003,9 @@
 
     }
 
+    .z-ind999{
+        z-index: 9999;
+    }
     .chck-add-tlt {
         text-align   : center;
         margin-bottom: 20px;
