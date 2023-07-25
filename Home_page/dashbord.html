@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- =========================Custume Style========================== -->
+    <link rel="stylesheet" href="../Home_page/style.css" />
+    <link rel="stylesheet" href="../Home_page/style2.css" />
+    <!-- =========================Font Awesome========================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- =========================Google Font========================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style2.css">
+    <!-- =========================Slick Slider========================== -->
+    <link rel="stylesheet" href="../slick css/slick.css" />
+    <link rel="stylesheet" href="../slick css/slick-theme.css" />
+
+    <title>Kala Achor - Dashbord</title>
+  </head>
+
+  <body>
+    <div class="full_container h-full">
+      <div class="akc_header">
+        <div class="getfunc  brand_logo">
+          <a href="../Home_page/index.html"><img src="../images/logo.png" alt="Logo" /></a>
+        </div>
+        <div class="getfunc links">
+          <a href="#" class="link">Home</a>
+          <a href="#" class="link">Weman Products</a>
+          <a href="#" class="link">Blogs</a>
+        </div>
+        <span class="getback">
+          <i onclick="closes()" class="fa-sharp fa-solid fa-arrow-left arro hide z-9"></i>
+        </span>
+        <div class="search_btn getsearch" onclick="searchfull()">
+          <span>
+            <i class="fa-sharp fa-solid fa-magnifying-glass srch "></i>
+          </span>
+          <input type="text" placeholder="Search Here" id="inoutbox" />
+          <span><i class="fa-sharp fa-solid fa-close close hide"></i></span>
+
+        </div>
+
+        <div class="getfunc right_link_logo">
+          <a href="../Home_page/cart.html#"><i class="fa-solid fa-cart-shopping H_cart_btn"></i></a>
+          <a href="../Home_page/wishlist.html#"><i class="fa-solid fa-heart"></i></a>
+        </div>
+        <a href="../Home_page/dashbord.html">
+          <div class="getfunc user_profile mob_dis_b ">
+            <img
+              src="https://3.bp.blogspot.com/-kdlF5AdkRfw/WTaHz7uBeAI/AAAAAAAAMMA/lgPnfnqjtGcRJYOzaYCoiPsgGJD9Gh6dgCLcB/s1600/1415352366Neha-Kakkar-Singer-.jpg"
+              alt="user_profile" />
+          </div>
+        </a>
+        <!-- ===================Login Btn============ -->
+      </div>
+
+      <div class="myprofile mob-none">
+        <div class="profile_sidebar mob_hide">
+          <div class="profile_img_box">
+            <div class="profile_img">
+              <img
+                src="data:image/jpeg;base64,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"
+                alt="img">
+            </div>
+            <h1>Sunogungunao</h1>
+          </div>
+          <div class="side_links">
+            <a href="#_profile">
+              <div class="side_list_item myp  user_sidelink_active">
+                <i class="fa-solid fa-address-card fa-beat-fade"></i>
+                <span>My Profile</span>
+              </div>
+            </a>
+            <a href="/Home_page/myorder.html">
+              <div class="side_list_item">
+                <i class="fa-solid fa-cart-shopping fa-beat-fade"></i>
+                <span>My Orders</span>
+              </div>
+            </a>
+            <a href="/Home_page/cart.html">
+              <div class="side_list_item">
+                <i class="fa-sharp fa-solid fa-cart-plus fa-beat-fade"></i>
+                <span>My Cart</span>
+              </div>
+            </a>
+            <a href="/Home_page/wishlist.html">
+              <div class="side_list_item">
+                <i class="fa-solid fa-heart-circle-plus fa-beat-fade"></i>
+                <span>My Wishlist</span>
+              </div>
+            </a>
+            <a href="#_address">
+              <div class="side_list_item ads ">
+                <i class="fa-sharp fa-solid fa-location-dot fa-beat-fade"></i>
+                <span>Address</span>
+              </div>
+            </a>
+            <a href="#">
+              <div class="side_list_item">
+                <i class="fa-solid fa-lock-open fa-beat-fade"></i>
+                <span>Sign Out</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="profile_container wh-100">
+          <div id="_profile" class="myProfile_box">
+            <h1 class="aling_center dash_title">My Profile</h1>
+            <div class="profile_img_box mob_dis_f">
+              <div class="profile_img">
+                <img
+                  src="data:image/jpeg;base64,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"
+                  alt="img">
+              </div>
+              <h1>Sunogungunao</h1>
+            </div>
+            <h2 class="m-t-2">Laura Dev</h2>
+            <div class="gender m-t-2">
+              <h3>Gender</h3>
+              <input type="radio" name="male">
+              <label for="male">Male</label>
+              <input type="radio" name="female">
+              <label for="male">Female</label>
+            </div>
+            <div class="profile_email m-t-2">
+              <h3>E-mail</h3>
+              <p>laura20dev@gmail.com</p>
+            </div>
+            <div class="profile_number m-t-2">
+              <h3>Primary Number</h3>
+              <p>9640392854</p>
+            </div>
+            <div class="profile_number m-t-2">
+              <h3>Alternate Number</h3>
+              <p>9640392854</p>
+            </div>
+          </div>
+
+          <div id="_address" class="myProfile_box">
+            <h1 class="aling_center dash_title">Save Addresses</h1>
+
+            <div class="dash_address_scroll_box">
+
+
+              <div class="address_box m-t-2">
+                <span>Shiv Shanker</span>
+                <span>+91 8604298591</span>
+                <span>abhikush49001@gmail.com</span>
+                <span>Vill + Post -</span>
+                <span>Bangla</span>
+                <span>District -</span>
+                <span>Deoia -274533</span>
+                <a href="./checkout.html#_edit_address">
+                  <div class="Edit_icon">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </div>
+                </a>
+              </div>
+
+
+              <div class="address_box m-t-2">
+                <span>Shiv Shanker</span>
+                <span>+91 8604298591</span>
+                <span>abhikush49001@gmail.com</span>
+                <span>Vill + Post -</span>
+                <span>Bangla</span>
+                <span>District -</span>
+                <span>Deoia -274533</span>
+                <a href="./checkout.html#_edit_address">
+                  <div class="Edit_icon">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </div>
+                </a>
+              </div>
+
+
+              <div class="address_box m-t-2">
+                <span>Shiv Shanker</span>
+                <span>+91 8604298591</span>
+                <span>abhikush49001@gmail.com</span>
+                <span>Vill + Post -</span>
+                <span>Bangla</span>
+                <span>District -</span>
+                <span>Deoia -274533</span>
+                <a href="./checkout.html#_edit_address">
+                  <div class="Edit_icon">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </div>
+                </a>
+              </div>
+
+
+              <div class="address_box m-t-2">
+                <span>Shiv Shanker</span>
+                <span>+91 8604298591</span>
+                <span>abhikush49001@gmail.com</span>
+                <span>Vill + Post -</span>
+                <span>Bangla</span>
+                <span>District -</span>
+                <span>Deoia -274533</span>
+                <a href="./checkout.html#_edit_address">
+                  <div class="Edit_icon">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </div>
+                </a>
+              </div>
+
+
+              <div class="address_box m-t-2">
+                <span>Shiv Shanker</span>
+                <span>+91 8604298591</span>
+                <span>abhikush49001@gmail.com</span>
+                <span>Vill + Post -</span>
+                <span>Bangla</span>
+                <span>District -</span>
+                <span>Deoia -274533</span>
+                <a href="./checkout.html#_edit_address">
+                  <div class="Edit_icon">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </div>
+                </a>
+              </div>
+
+
+              <div class="address_box m-t-2">
+                <span>Shiv Shanker</span>
+                <span>+91 8604298591</span>
+                <span>abhikush49001@gmail.com</span>
+                <span>Vill + Post -</span>
+                <span>Bangla</span>
+                <span>District -</span>
+                <span>Deoia -274533</span>
+                <a href="./checkout.html#_edit_address">
+                  <div class="Edit_icon">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </div>
+                </a>
+              </div>
+
+
+              <div class="address_box m-t-2">
+                <span>Shiv Shanker</span>
+                <span>+91 8604298591</span>
+                <span>abhikush49001@gmail.com</span>
+                <span>Vill + Post -</span>
+                <span>Bangla</span>
+                <span>District -</span>
+                <span>Deoia -274533</span>
+                <a href="./checkout.html#_edit_address">
+                  <div class="Edit_icon">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </div>
+                </a>
+              </div>
+
+
+              <div class="address_box m-t-2">
+                <span>Shiv Shanker</span>
+                <span>+91 8604298591</span>
+                <span>abhikush49001@gmail.com</span>
+                <span>Vill + Post -</span>
+                <span>Bangla</span>
+                <span>District -</span>
+                <span>Deoia -274533</span>
+                <a href="./checkout.html#_edit_address">
+                  <div class="Edit_icon">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mob_bottom_menuBar">
+          <div class="left_nav_btnGroup">
+            <a href="../Home_page/index.html">
+              <div class="mob_link ">
+                <i class="fa-sharp fa-solid fa-house"></i>
+                <span>Home</span>
+              </div>
+            </a>
+            <a href="../Home_page/wishlist.html">
+              <div class="mob_link">
+                <i class="fa-sharp fa-solid fa-heart "></i>
+                <span>Wishlist</span>
+                <div class="badges">
+                  <p>7</p>
+                </div>
+              </div>
+            </a>
+            <a href="../Home_page/cart.html">
+              <div class="mob_link ">
+                <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                <span>Cart</span>
+                <div class="badges">
+                  <p>5</p>
+                </div>
+
+              </div>
+            </a>
+          </div>
+          <div class="mob_search_btn" onclick="searchfull()">
+            <i class="fa-sharp fa-solid fa-search"></i>
+          </div>
+          <div class="mob_search_btn mob_menu_bar">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="mob-dash pc-none">
+        <div class="dash-top-box">
+          <div class="container">
+            <div class="dash-us-frslt">
+              <h5>P</h5>
+
+
+            </div>
+            <div class="usr-tp-dtl">
+              <h5>Piyush Maurya <i class="fa-solid fa-pen"></i></h5>
+              <div class="usr-tb-lst">
+                <div class="row ">
+                  <div class="col-6">
+                    <a class="prod_actv usr-dtl-lnk">Personal Info</a>
+                  </div>
+                  <div class="col-6">
+                    <a class="usr-dtl-lnk">Address</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="dash-btm-box">
+          <div class="container">
+            <div class="prsnl-inf usr-dash-itm prod_actv" id="usr-prsnl">
+              <div class="usr-dtl-bx">
+                <p>Gender</p>
+                <div class="ur-dtl-ans">
+                  <div class="row">
+                    <div class="col-10">
+
+                      <i class="fa-solid fa-person"></i> Male
+                    </div>
+
+                    <div class="col-2">
+                      <i class="fa-solid fa-pen"></i>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="usr-dtl-bx">
+                <p>Mobile Number</p>
+                <div class="ur-dtl-ans">
+                  <div class="row">
+                    <div class="col-10">
+                      <i class="fa-solid fa-phone"></i> +91 8303567728
+                    </div>
+                    <div class="col-2">
+                      <i class="fa-solid fa-pen"></i>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="usr-dtl-bx">
+                <p>Email Id</p>
+                <div class="ur-dtl-ans">
+                  <div class="row">
+                    <div class="col-10">
+                      <i class="fa-solid fa-envelope"></i> piyya5611@gmail.com
+                    </div>
+                    <div class="col-2">
+                      <i class="fa-solid fa-pen"></i>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+              </div>
+              
+              <div class="add-info usr-dash-itm none" id="usr-add">
+                <div class="usr-addr-bx">
+                  <div class="row">
+                    <div class="col-9">
+                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, libero.</p>
+                      <p>+91 8303567728</p>
+
+                    </div>
+                    <div class="col-3">
+                      <div class="usr-add-icn">
+                        <div class="usr-add-dlt">
+                          <i class="fa-solid fa-trash"></i>
+                        </div>
+                        <div class="usr-add-edt">
+                          <i class="fa-solid fa-pen"></i>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+                <div class="usr-addr-bx">
+                  <div class="row">
+                    <div class="col-9">
+                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, libero.</p>
+                      <p>+91 8303567728</p>
+
+                    </div>
+                    <div class="col-3">
+                      <div class="usr-add-icn">
+                        <div class="usr-add-dlt">
+                          <i class="fa-solid fa-trash"></i>
+                        </div>
+                        <div class="usr-add-edt">
+                          <i class="fa-solid fa-pen"></i>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="add-addr none">
+                <button>Add Address</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="bottom_wraper"></div>
+        <div class="mob_bottom_model mob-none">
+          <div class="bottom_top_line"></div>
+          <div class="bottom_model_contant hide mob_dis_b">
+            <div class="side_links">
+              <a href="#_profile">
+                <div class="side_list_item mob-myp  user_sidelink_active">
+                  <i class="fa-solid fa-address-card fa-beat-fade"></i>
+                  <span>My Profile</span>
+                </div>
+              </a>
+              <a href="/Home_page/myorder.html">
+                <div class="side_list_item">
+                  <i class="fa-solid fa-cart-shopping fa-beat-fade"></i>
+                  <span>My Orders</span>
+                </div>
+              </a>
+              <a href="/Home_page/cart.html">
+                <div class="side_list_item">
+                  <i class="fa-sharp fa-solid fa-cart-plus fa-beat-fade"></i>
+                  <span>My Cart</span>
+                </div>
+              </a>
+              <a href="/Home_page/wishlist.html">
+                <div class="side_list_item">
+                  <i class="fa-solid fa-heart-circle-plus fa-beat-fade"></i>
+                  <span>My Wishlist</span>
+                </div>
+              </a>
+              <a href="#_address">
+                <div class="side_list_item mob-ads ">
+                  <i class="fa-sharp fa-solid fa-location-dot fa-beat-fade"></i>
+                  <span>Address</span>
+                </div>
+              </a>
+              <a href="#">
+                <div class="side_list_item">
+                  <i class="fa-solid fa-lock-open fa-beat-fade"></i>
+                  <span>Sign Out</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="../Home_page/script.js"></script>
+      <script src="../Home_page/scriptSearch.js"></script>
+      <script src="../Home_page/SrciptMenuModel.js"></script>
+      <script>
+        const tabs = document.querySelectorAll('.usr-tb-lst a');
+        const tabContents = document.querySelectorAll('.usr-dash-itm');
+
+
+        tabs.forEach((tab, index) => {
+          tab.addEventListener("click", () => {
+
+            tabs.forEach((tab) => tab.classList.remove("prod_actv"));
+
+            tab.classList.add("prod_actv");
+
+            tabContents.forEach((c) => c.classList.remove('prod_actv'));
+
+
+            tabContents[index].classList.add("prod_actv")
+          });
+        });
+
+        tabs[0].click();
+
+
+      </script>
+
+  </body>

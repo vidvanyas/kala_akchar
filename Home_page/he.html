@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Scroll and Fixed Two Sections Example</title>
+        <style>
+            body {
+                height: 2000px;
+                /* Set a tall content to enable scrolling */
+            }
+
+            .fixed-section {
+                position: absolute;
+                /* Start with absolute position */
+                width: 100%;
+                background-color: lightblue;
+                padding: 10px;
+            }
+
+            .section1 {
+                top: 100px;
+                /* Initial top position for section 1 */
+            }
+
+            .section2 {
+                top: 300px;
+                /* Initial top position for section 2 */
+            }
+
+            .content {
+                margin-top: 500px;
+                /* Add some margin to see the effect better */
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="fixed-section section1">
+            <p>This is fixed section 1.</p>
+        </div>
+
+        <div class="fixed-section section2">
+            <p>This is fixed section 2.</p>
+        </div>
+
+        <div class="content">
+            <h2>Scroll Down</h2>
+            <p>Scroll down to see the sections fixed at certain heights.</p>
+        </div>
+
+        <script>
+            window.addEventListener('scroll', function () {
+                const scrollPosition = window.scrollY;
+
+                // Adjust the heights at which the sections become fixed
+                const fixedHeight1 = 100;
+                const fixedHeight2 = 100;
+
+                const section1 = document.querySelector('.section1');
+                const section2 = document.querySelector('.section2');
+
+                if (scrollPosition >= fixedHeight1 && scrollPosition) {
+                    section1.style.position = 'fixed';
+                    section1.style.top = '10px';
+                } else {
+                    section1.style.position = 'absolute';
+                    section1.style.top = '100px'; // Initial top position when not fixed
+                }
+
+                if (scrollPosition >= fixedHeight2) {
+                    section2.style.position = 'fixed';
+                    section2.style.top = '80px';
+                } else {
+                    section2.style.position = 'absolute';
+                    section2.style.top = '300px'; // Initial top position when not fixed
+                }
+            });
+        </script>
+    </body>
+
+</html>

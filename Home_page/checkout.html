@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- =========================Custume Style========================== -->
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="style2.css" />
+        <!-- =========================Font Awesome========================== -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- =========================Google Font========================== -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- =========================Slick Slider========================== -->
+        <link rel="stylesheet" href="../slick css/slick.css" />
+        <link rel="stylesheet" href="../slick css/slick-theme.css" />
+
+        <title>Kala Achor - Add to Cart</title>
+    </head>
+
+    <body class="akch-bg">
+        <div class="akch-container  wh-100">
+            <!-- ----------- Header -------------- -->
+            <div class="akc_header">
+                <div class="getfunc  brand_logo">
+                    <a href="/Home_page/index.html"><img src="../images/logo.png" alt="Logo" /></a>
+                </div>
+                <div class="getfunc links">
+                    <a href="#" class="link">Home</a>
+                    <a href="#" class="link">Weman Products</a>
+                    <a href="#" class="link">Blogs</a>
+                </div>
+                <span class="getback">
+                    <i onclick="closes()" class="fa-sharp fa-solid fa-arrow-left arro hide z-9"></i>
+                </span>
+                <div class="search_btn getsearch" onclick="searchfull()">
+                    <span>
+                        <i class="fa-sharp fa-solid fa-magnifying-glass srch "></i>
+                    </span>
+                    <input type="text" placeholder="Search Here" id="inoutbox" />
+                    <span><i class="fa-sharp fa-solid fa-close close hide"></i></span>
+
+                </div>
+
+                <div class="getfunc right_link_logo">
+                    <a href="../Home_page/cart.html#"><i class="fa-solid fa-cart-shopping H_cart_btn"></i></a>
+                    <a href="../Home_page/wishlist.html#"><i class="fa-solid fa-heart"></i></a>
+                </div>
+                <a href="../Home_page/dashbord.html">
+                    <div class="getfunc user_profile mob_dis_b ">
+                        <img src="https://3.bp.blogspot.com/-kdlF5AdkRfw/WTaHz7uBeAI/AAAAAAAAMMA/lgPnfnqjtGcRJYOzaYCoiPsgGJD9Gh6dgCLcB/s1600/1415352366Neha-Kakkar-Singer-.jpg"
+                            alt="user_profile" />
+                    </div>
+                </a>
+
+            </div>
+
+
+            <div class="mob-chc pc-none">
+                <div class="container">
+                    <div class="mob-check-tp">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="chek-tp-box">
+                                    <a href="">Address</a>
+
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="chek-tp-box active">
+                                    <a href="">Summary</a>
+
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="chek-tp-box">
+                                    <a href="">Payment</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="check-slct-add mob-none">
+                    <div class="container">
+                        <div class="slct-add-tlt">
+                            Select Address
+                        </div>
+                        <div class="slect-add-bx slct">
+
+                            <div class="slect-add-nme">
+                                Piyush Maurya
+                                <div class="row">
+                                    <div class="col-10">
+                                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                        <p>+91 7985445887</p>
+                                    </div>
+
+                                    <div class="col-2 edt-img">
+                                        <a href=""><img src="../images/edit.png" alt=""></a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="slect-add-bx ">
+
+                            <div class="slect-add-nme">
+                                Piyush Maurya
+                                <div class="row">
+                                    <div class="col-10">
+                                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                        <p>+91 7985445887</p>
+                                    </div>
+
+                                    <div class="col-2 edt-img">
+                                        <a href=""><img src="../images/edit.png" alt=""></a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="mob-check-add  mob-none" id="add_address">
+
+                    <div class="check-btm-bx">
+                        <div class="chck-add-tlt">
+                            <h4>Address</h4>
+                        </div>
+
+                        <div class="check-add-frm">
+                            <form action="" method="post">
+                                <div class="check-add-inp">
+                                    <input type="text" class="form-control" placeholder="Full Name">
+                                </div>
+                                <div class="check-add-inp">
+                                    <input type="email" class="form-control" placeholder="Email Id">
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="check-add-inp">
+                                            <input class="form-control" type="tel" placeholder="Mobile Number">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="check-add-inp">
+                                            <input class="form-control" type="tel"
+                                                placeholder="Alternate Mobile Number">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="check-add-inp">
+                                            <input type="text" class="form-control" placeholder="Pin Code">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="check-add-inp">
+                                            <input type="text" class="form-control" placeholder="City">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slect-head">
+                                    <p>Select type of Address</p>
+
+                                    <div class="slect-typ-add">
+
+                                        <div class="add-bx active">
+                                            Home
+                                        </div>
+                                        <div class="add-bx">
+                                            College
+                                        </div>
+                                        <div class="add-bx">
+                                            Work
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="check-smry">
+                    <div class="container">
+                        <div class="check-prod-smry">
+                            <div class="smry-box">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="smry-img">
+                                            <img src="../images/t_shirt.png" alt="">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-8">
+                                        <div class="prod-smry-dtl">
+                                            <h4>Lorem ipsum dolor sit.</h4>
+                                            <p>Amount: <span>₹200</span></p>
+                                            <p>Qty: <span>2</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="smry-box">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="smry-img">
+                                            <img src="../images/t_shirt.png" alt="">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-8">
+                                        <div class="prod-smry-dtl">
+                                            <h4>Lorem ipsum dolor sit.</h4>
+                                            <p>Amount: <span>₹200</span></p>
+                                            <p>Qty: <span>2</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="check-add-smry">
+                            <div class="box-add">
+                                <div class="cust-nme">
+                                    Piyush Maurya
+                                    <p>Lorem ipsum dolor sit amet consectetur Lorem, ipsum.</p>
+                                    <p>+91 1234567891</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="check-tlt-prc">
+                        <div class="tlt-prc-checkbx">
+
+                            <div class="container">
+                                <h6> Price Details</h6>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="prc-lft-chck">
+                                            <p>Price (3 Items)</p>
+                                            <p>Discounts</p>
+                                            <p>Delivery Charge</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="prc-rgh-chck">
+                                            <p>₹1228</p>
+                                            <p>-₹12</p>
+                                            <p>₹50</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="procd-btn">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-6">
+                                    <div class="mob-bck">
+                                        <button class="bck-check">Back</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="mob-procd">
+                                        <button class="procd-check">Proceed to Pay</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+        <script src="../Home_page/script.js"></script>
+
+        <!-- <script>
+        function addressPage() {
+            var dots = document.getElementsByClassName('navi_dot');
+            dots[0].classList.add('navi_active');
+            dots[1].classList.remove('navi_active');
+            dots[2].classList.remove('navi_active');
+
+
+
+        }
+        function changePage() {
+            var dots = document.getElementsByClassName('navi_dot');
+            dots[0].classList.add('navi_active');
+            dots[1].classList.add('navi_active');
+            dots[2].classList.remove('navi_active');
+
+
+
+        }
+        function paymentPage() {
+            var dots = document.getElementsByClassName('navi_dot');
+            dots[0].classList.add('navi_active');
+            dots[1].classList.add('navi_active');
+            dots[2].classList.add('navi_active');
+        }
+    </script> -->
+
+
+    </body>
