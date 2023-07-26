@@ -2624,9 +2624,7 @@
         padding: 5px 7px;
     }
 
-    .prod-dtl .add-crt {
-        /* font-weight: 600; */
-    }
+   
 
     .prod-dtl .by-nw {
         background-color: #fff;
@@ -2922,9 +2920,7 @@
         overflow-y: hidden;
     }
 
-    .dash_title {
-        font-size: 20px;
-    }
+    
 
     .cat_img_box::after {
         content : "";
@@ -3098,10 +3094,7 @@
         font-size: 10px;
     }
 
-    .mob_bottom_menuBar a {
-        text-decoration: none;
-    }
-
+   
 
     /* =============bottom menu bar=============== */
     .mobCart {
@@ -3113,17 +3106,6 @@
         flex-direction: row-reverse !important;
     }
 
-    .mob_bottom_menuBar {
-        position        : fixed;
-        display         : flex;
-        justify-content : space-between;
-        left            : 0;
-        bottom          : 0;
-        width           : 100%;
-        padding         : 10px 24px;
-        background-color: #000;
-        z-index         : 999;
-    }
 
     .akch-prod-rvw {
         margin-top: 10px;
@@ -4522,10 +4504,7 @@ cursor: pointer;
         padding-bottom: 100px;
     }
 
-    .mob_hide {
-        display: none !important;
-    }
-
+  
 
     .newly_arrived_continer {
         display: none;
@@ -4762,9 +4741,7 @@ cursor: pointer;
         padding: 5px 7px;
     }
 
-    .prod-dtl .add-crt {
-        /* font-weight: 600; */
-    }
+   
 
     .prod-dtl .by-nw {
         background-color: #fff;
@@ -4772,9 +4749,7 @@ cursor: pointer;
         font-weight     : 600;
     }
 
-    .mob_dis_f {
-        display: flex !important;
-    }
+  
 
     .mob_wishlist {
         position        : absolute;
@@ -4795,9 +4770,7 @@ cursor: pointer;
         font-size: 20px;
     }
 
-    .profile_container {
-        width: 100% !important;
-    }
+    
 
     .mob_bottom_model {
         position        : fixed;
@@ -4844,9 +4817,7 @@ cursor: pointer;
         background-color: #00000092;
     }
 
-    .address_box span {
-        font-size: 12px;
-    }
+   
 
     .bottom_model_contant {
         width  : 100%;
@@ -4854,15 +4825,6 @@ cursor: pointer;
         padding: 10px 5px;
     }
 
-    .user_sidelink_active::after,
-    .user_sidelink_active::before {
-        display: none;
-    }
-
-    .user_sidelink_active {
-        border-radius   : 5px;
-        background-color: #f7a4f89e !important;
-    }
 
     .checkout_form {
         width: 95%;
