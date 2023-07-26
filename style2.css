@@ -830,7 +830,7 @@
 
 
 
-@media only screen and (max-width: 768px)  {
+@media only screen and (max-width: 768px) {
 
     /* portrait phones */
 
@@ -1440,7 +1440,7 @@
     .cart-bx {
         background-color: #ffffff;
         border-radius   : 10px;
-        overflow-x:hidden;
+        overflow-x      : hidden;
         padding         : 10px;
 
     }
@@ -1939,24 +1939,26 @@
     }
 
     .chek-tp-box {
-        margin-bottom   : 30px;
-        text-align      : center;
-       
+        margin-bottom: 30px;
+        text-align   : center;
+
 
     }
-    .add-address-btn{
-      text-align: end;
-        height: 35px;
+
+    .add-address-btn {
+        text-align: end;
+        height    : 35px;
     }
-    .add-address-btn a{
+
+    .add-address-btn a {
         background-color: #fff;
-        color: #000;
-        border-radius: 10px;
-        padding: 9px 10px;
+        color           : #000;
+        border-radius   : 10px;
+        padding         : 9px 10px;
     }
-  
-    
-    .chek-tp-box a{
+
+
+    .chek-tp-box a {
         padding         : 9px 13px;
         margin-bottom   : 30px;
         text-align      : center;
@@ -1965,10 +1967,11 @@
 
 
     }
-    .block{
+
+    .block {
         display: block;
     }
-    
+
     .mob-check-tp .row {
         padding: 0 10px;
     }
@@ -2004,20 +2007,22 @@
 
     }
 
-    .z-ind999{
+    .z-ind999 {
         z-index: 9999;
     }
+
     .chck-add-tlt {
         text-align   : center;
         margin-bottom: 20px;
 
     }
-    .chck-add-tlt button{
-border: 0;
+
+    .chck-add-tlt button {
+        border          : 0;
         background-color: unset;
-        float: left;
-    margin-top: 1px;
-    font-size: 20px;
+        float           : left;
+        margin-top      : 1px;
+        font-size       : 20px;
     }
 
     .check-add-inp {
@@ -2056,19 +2061,21 @@ border: 0;
         margin-right    : 20px;
     }
 
-    .adr-nxt{
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        padding: 10px;
-        text-align: center  ;
+    .adr-nxt {
+        position  : fixed;
+        bottom    : 0;
+        width     : 100%;
+        padding   : 10px;
+        text-align: center;
     }
-    .adr-nxt button{
-        padding: 5px 40px;
+
+    .adr-nxt button {
+        padding         : 5px 40px;
         background-color: #fff;
-        border: 1px solid;
-        border-radius: 50px;
+        border          : 1px solid;
+        border-radius   : 50px;
     }
+
     .add-bx.active {
         border          : 2px solid #ff7878 !important;
         background-color: #ff8e8e !important;
@@ -2219,31 +2226,37 @@ border: 0;
         top       : -45px;
 
     }
-    .smry-blr{
+
+    .smry-blr {
         z-index: 9;
         opacity: 0.2;
     }
+
     .check-tab.check_active {
-    background-color: #fff;
-    color: #000;    
+        background-color: #fff;
+        color           : #000;
     }
-    .check-cnt{
+
+    .check-cnt {
         display: none;
     }
+
     .check-cnt.check_active {
         display: block;
-      }
-    .cod-cnt {padding: 8px 12px;
+    }
+
+    .cod-cnt {
+        padding         : 8px 12px;
         background-color: #e3e3e3;
-        border-radius: 10px;
-        
+        border-radius   : 10px;
+
         margin: 2px 10px;
     }
- 
+
     .clse-pmt button {
         background-color: #fff;
         border-radius   : 50%;
-        border: 0;
+        border          : 0;
         padding         : 5px 11px;
 
     }
@@ -2299,41 +2312,49 @@ border: 0;
         width           : 80%;
     }
 
-    .ord-plcd{
-        width: 90%;
-        padding:10px 10px;
-        text-align: center;
-        margin: auto;
-        border-radius: 10px;
+    .ord-plcd {
+        width           : 90%;
+        padding         : 10px 10px;
+        text-align      : center;
+        margin          : auto;
+        border-radius   : 10px;
         background-color: #fff;
     }
-    .ord-plcd-gif{
+
+    .ord-plcd-gif {
         text-align: center;
     }
-    .ord-plcd-gif img{
-        width: 90px;
+
+    .ord-plcd-gif img {
+        width : 90px;
         margin: auto;
         height: 90px;
     }
-    .ord-plcd-tlt{
+
+    .ord-plcd-tlt {
         font-weight: 600;
     }
-    .ord-plcd-tlt p{
+
+    .ord-plcd-tlt p {
         font-weight: 500;
     }
-    .ord-plcd-gif a{
+
+    .ord-plcd-gif a {
         float: right;
         color: #000;
     }
-    .ord-plcd-tlt{
+
+    .ord-plcd-tlt {
         margin-bottom: 15px;
     }
-    .my_ord_btn{
-        padding: 9px 10px;
-        color: #ffffff;
-        border-radius: 50px;
+
+    .my_ord_btn {
+        padding         : 9px 10px;
+        color           : #ffffff;
+        border-radius   : 50px;
         background-color: #000000;
     }
+
     /* end checkout */
     .tp-p {
         font-size: 12px;
@@ -2813,7 +2834,7 @@ border: 0;
 }
 
 
-@media only screen and (min-width: 768px)  {
+@media only screen and (min-width: 768px) {
 
     /* portrait phones */
 
@@ -2845,11 +2866,11 @@ border: 0;
         display: none;
     }
 
-   .pc-myord{
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 10px;
-   }
+    .pc-myord {
+        background-color: #fff;
+        border-radius   : 10px;
+        padding         : 10px;
+    }
 
 
     .newly_lanch_container {
@@ -3423,8 +3444,8 @@ border: 0;
         margin-top: 15px;
     }
 
-    .pc-rgh-bord{
-        border-right: 1px solid #222;
+    .pc-rgh-bord {
+        border-right      : 1px solid #222;
         border-right-style: dashed;
     }
 
@@ -3467,13 +3488,101 @@ border: 0;
         font-size: 17px;
     }
 
+    .pc-box {
+        background-color: #ffffff;
+        width           : 90%;
+        margin          : auto;
+        padding: 10px 20px;
+        border-radius   : 20px;
+    }
+
     .mob-ordid-tp {
         margin-bottom: 25px;
     }
 
+    .pc-prod-chck {
+        background-color: #F6F6F6;
+        border-radius   : 16px;
+        box-shadow      : 0 0 9px 0 #ddd;
+        padding         : 10px;
+        border: 2px solid #dedede;
+        margin          : 15px 0;
+    }
+
+    .pc-smry-img {
+        text-align: center;
+    }
+
+    .pc-smry-img img {
+        width           : 100px;
+        height          : 100px;
+        padding         : 10px;
+        border-radius   : 50%;
+        background-color: #fff;
+    }
+
+    .pc-smry-tlt{
+        font-weight: 600;
+    }
     .ord-sts-trk {
         position: absolute;
     }
+
+    .pc-check-rgh{
+        text-align: end;
+    }
+    .pc-smry-totl{
+        margin-top: 10px;
+        padding: 10px 2px;
+        padding-bottom: 10px;
+        border-top: 2px solid #000;
+        border-top-style: dashed;
+    }
+    .pc-txt-bld{
+        font-weight: 600;
+    }
+    .pc-smry-totltxt{
+        float: left;
+    }
+    .pc-smry-amnt{
+        float: right;
+    }
+    .pc-check-lg{
+        height: 60px;
+    }
+    .pc-check-lg img{
+        width: 150px;
+    }
+    .mob-check-tp{
+        top: 30px;
+        position: relative;
+        border-top: 1px solid #000;
+    }
+    .pc-chck-ln{
+        border: 2px solid #F49300;
+        position: relative;
+        left: -3px;
+        border-radius: 50px;
+        width: 52%;
+        top: -2px;
+    }
+    .pc-oth-ln{
+        left: -95px;
+    width: 182px;
+    }
+    .pc-chck-dt{
+        height: 9px;
+        position: relative;
+        width: 9px;
+        border-radius: 50%;
+        margin: auto;
+        top: -8px;
+        background-color: #F49300;
+    }
+    .pc-pmnt{
+        width: 100% !important;
+    }
+ 
 
     .ord-dt {
         animation       : blink 1s linear infinite;
@@ -3584,9 +3693,10 @@ border: 0;
     .ord-sts-hg {
         margin-bottom: 5px;
     }
-    .pc-ord{
+
+    .pc-ord {
         position: relative;
-        top: 60px;
+        top     : 60px;
     }
 
     .ord-prod-scrl {
@@ -3642,7 +3752,7 @@ border: 0;
         box-shadow      : 0 0 9px 0 #ddd;
         border-radius   : 10px;
         font-size       : 15px;
-        border: 1px solid;
+        border          : 1px solid;
         padding         : 6px 18px;
     }
 
@@ -3707,10 +3817,10 @@ border: 0;
     }
 
     .ord-rvw-bx {
-        padding: 34px 23px;
+        padding         : 34px 23px;
         background-color: #fff;
-        border-radius: 10px;
-        width: 38%;
+        border-radius   : 10px;
+        width           : 38%;
     }
 
     .ord-rvw-tlt {
@@ -3921,47 +4031,66 @@ border: 0;
 
     /* checkout */
 
-    .mob-chc {
-        margin-top: 30px;
-    }
-
     .chek-tp-box {
-        margin-bottom   : 30px;
-        text-align      : center;
-       
+        margin-bottom: 30px;
+        text-align   : center;
+
 
     }
-    .add-address-btn{
-      text-align: end;
-        height: 35px;
+
+    .add-address-btn {
+        text-align: end;
+        height    : 35px;
     }
-    .add-address-btn a{
+
+    .add-address-btn a {
         background-color: #fff;
-        color: #000;
-        border-radius: 10px;
+       border: 1px solid #c2c2c2;
+cursor: pointer;
+        border-radius: 38px;
+        box-shadow: 0 0 9px 0 #ddd;
         padding: 9px 10px;
     }
-  
-    
-    .chek-tp-box a{
-        padding         : 9px 13px;
-        margin-bottom   : 30px;
-        text-align      : center;
-        border-radius   : 8px;
-        background-color: #989898;
-
-
+    .pc-smry-btn{
+        margin-top: 90px;
     }
-    .block{
+
+.pc-chec-tab{
+    position: relative;
+}
+
+.chek-tp-box {
+    position: relative;
+    top: 8px;
+}
+.check-tab.check_active{
+    position: relative;
+    top: -12px;
+}
+
+#pc_chec_pmnt{
+    border-top: 4px solid #f49300;
+    top: -2px;
+}
+#pc_chec_pmnt .pc-chck-ln   {
+    top: -4px;
+}
+#pc_chec_pmnt .pc-chck-dt{
+    top: -10px;
+}
+    .block {
         display: block;
     }
-    
+
     .mob-check-tp .row {
         padding: 0 10px;
     }
 
     .mob-check-tp .col-4 {
-        padding: 0 7px;
+        padding: 0 4px;
+    }
+    .check-slct-add{
+        margin-top: 10px;
     }
 
     .chek-tp-box a {
@@ -3991,20 +4120,22 @@ border: 0;
 
     }
 
-    .z-ind999{
+    .z-ind999 {
         z-index: 9999;
     }
+
     .chck-add-tlt {
         text-align   : center;
         margin-bottom: 20px;
 
     }
-    .chck-add-tlt button{
-border: 0;
+
+    .chck-add-tlt button {
+        border          : 0;
         background-color: unset;
-        float: left;
-    margin-top: 1px;
-    font-size: 20px;
+        float           : left;
+        margin-top      : 1px;
+        font-size       : 20px;
     }
 
     .check-add-inp {
@@ -4043,19 +4174,24 @@ border: 0;
         margin-right    : 20px;
     }
 
-    .adr-nxt{
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        padding: 10px;
-        text-align: center  ;
+    .adr-nxt {
+     
+        width     : 100%;
+        padding   : 10px;
+        text-align: center;
     }
-    .adr-nxt button{
-        padding: 5px 40px;
+    .pc-chec-tab.none{
+        position: relative;
+        top: 10px;
+    }
+
+    .adr-nxt button {
+        padding         : 5px 40px;
         background-color: #fff;
-        border: 1px solid;
-        border-radius: 50px;
+        border          : 1px solid;
+        border-radius   : 50px;
     }
+
     .add-bx.active {
         border          : 2px solid #ff7878 !important;
         background-color: #ff8e8e !important;
@@ -4063,13 +4199,21 @@ border: 0;
 
     .slect-add-bx {
         background-color: #fff;
-        border-radius   : 10px;
-        padding         : 10px 15px;
-        margin          : 20px 0;
+        border-radius: 10px;
+        padding: 10px 15px;
+        margin: 20px 0;
+        box-shadow: 0 0 9px 0 #dddd;
+        cursor: pointer;
+    }
+    .mob-check-tp{
+        margin-bottom: 15px;
     }
 
+    .edt-img{
+        text-align: end;
+    }
     .edt-img img {
-        width: 80%;
+        width: 30%;
     }
 
     .slct {
@@ -4078,7 +4222,7 @@ border: 0;
 
     .slct-add-tlt {
         font-size: 24px;
-        color    : #fff;
+        color    : #000000;
     }
 
     .slect-add-nme {
@@ -4200,37 +4344,38 @@ border: 0;
         font-size  : 15px;
     }
 
-    .clse-pmt {
-        text-align: center;
-        position  : relative;
-        top       : -45px;
-
-    }
-    .smry-blr{
+   
+   
+    .smry-blr {
         z-index: 9;
         opacity: 0.2;
     }
+
     .check-tab.check_active {
-    background-color: #fff;
-    color: #000;    
+        background-color: #fff;
+        color           : #000;
     }
-    .check-cnt{
+
+    .check-cnt {
         display: none;
     }
+
     .check-cnt.check_active {
         display: block;
-      }
-    .cod-cnt {padding: 8px 12px;
+    }
+
+    .cod-cnt {
+        padding         : 8px 12px;
         background-color: #e3e3e3;
-        border-radius: 10px;
-        
+        border-radius   : 10px;
+
         margin: 2px 10px;
     }
- 
+
     .clse-pmt button {
         background-color: #fff;
         border-radius   : 50%;
-        border: 0;
+        border          : 0;
         padding         : 5px 11px;
 
     }
@@ -4241,12 +4386,13 @@ border: 0;
 
     .check-paymnt h6 {
         font-weight: 600;
+        padding-top: 7px;
+    }
+    .check-paymnt{
+        margin-top: 25px;
     }
 
     .check-paymnt {
-        background-color: #ffffff;
-        position        : fixed;
-        bottom          : 0;
         width           : 100%;
 
         padding                : 0px 13px 20px;
@@ -4255,6 +4401,12 @@ border: 0;
 
     }
 
+    .check-pmt-btn .mob-bck{
+        text-align: left;
+    }
+    .clse-pmt.mob-none{
+        float: left;
+    }
     .mob-pmt-opt {
         padding-top : 4px;
         padding-left: 7px;
@@ -4286,54 +4438,65 @@ border: 0;
         width           : 80%;
     }
 
-    .ord-plcd{
-        width: 90%;
-        padding:10px 10px;
-        text-align: center;
-        margin: auto;
-        border-radius: 10px;
+    .ord-plcd {
+        width           : 90%;
+        padding         : 10px 10px;
+        text-align      : center;
+        margin          : auto;
+        border-radius   : 10px;
         background-color: #fff;
     }
-    .ord-plcd-gif{
+
+    .ord-plcd-gif {
         text-align: center;
     }
-    .ord-plcd-gif img{
-        width: 90px;
+
+    .ord-plcd-gif img {
+        width : 90px;
         margin: auto;
         height: 90px;
     }
-    .ord-plcd-tlt{
+
+    .ord-plcd-tlt {
         font-weight: 600;
     }
-    .ord-plcd-tlt p{
+
+    .ord-plcd-tlt p {
         font-weight: 500;
     }
-    .ord-plcd-gif a{
+
+    .ord-plcd-gif a {
         float: right;
         color: #000;
     }
-    .ord-plcd-tlt{
+
+    .ord-plcd-tlt {
         margin-bottom: 15px;
     }
-    .my_ord_btn{
-        padding: 9px 10px;
-        color: #ffffff;
-        border-radius: 50px;
+
+    .my_ord_btn {
+        padding         : 9px 10px;
+        color           : #ffffff;
+        border-radius   : 50px;
         background-color: #000000;
     }
+
     .tp-p {
         font-size: 15px;
     }
-    .ord_id{
+
+    .ord_id {
         text-align: end;
     }
-    .inv{
-        color: #001972;
+
+    .inv {
+        color      : #001972;
         font-weight: 600;
-        font-size: 17px;
+        font-size  : 17px;
     }
+
     /* end checkout */
-    
+
 
 
     .tp-p span {
