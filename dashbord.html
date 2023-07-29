@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- =========================Custume Style========================== -->
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="style2.css">
-  <!-- =========================Font Awesome========================== -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <!-- =========================Google Font========================== -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,800;0,900;1,300&display=swap"
-    rel="stylesheet" />
-  <!-- =========================Slick Slider========================== -->
-  <link rel="stylesheet" href="slick_css/slick.css" />
-  <link rel="stylesheet" href="slick_css/slick-theme.css" />
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- =========================Custume Style========================== -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <!-- =========================Font Awesome========================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- =========================Google Font========================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-  <title>Kala Achor - Home</title>
-</head>
+    <!-- =========================Slick Slider========================== -->
+    <link rel="stylesheet" href="slick_css/slick.css" />
+    <link rel="stylesheet" href="slick_css/slick-theme.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+    <title>Kala Achor - Home</title>
+  </head>
 
   <body>
     <div class="full_container h-full">
@@ -73,39 +71,39 @@
             <h1>Sunogungunao</h1>
           </div>
           <div class="side_links">
-            <a href="#_profile">
-              <div class="side_list_item myp  user_sidelink_active">
-                <i class="fa-solid fa-address-card fa-beat-fade"></i>
+            <a onclick="add('prof')">
+              <div class="side_list_item myp is  user_sidelink_active" id="prof_tab">
+                <i class="fa-solid fa-address-card "></i>
                 <span>My Profile</span>
               </div>
             </a>
             <a href="/Home_page/myorder.html">
               <div class="side_list_item">
-                <i class="fa-solid fa-cart-shopping fa-beat-fade"></i>
+                <i class="fa-solid fa-cart-shopping "></i>
                 <span>My Orders</span>
               </div>
             </a>
             <a href="/Home_page/cart.html">
               <div class="side_list_item">
-                <i class="fa-sharp fa-solid fa-cart-plus fa-beat-fade"></i>
+                <i class="fa-sharp fa-solid fa-cart-plus "></i>
                 <span>My Cart</span>
               </div>
             </a>
             <a href="/Home_page/wishlist.html">
               <div class="side_list_item">
-                <i class="fa-solid fa-heart-circle-plus fa-beat-fade"></i>
+                <i class="fa-solid fa-heart-circle-plus "></i>
                 <span>My Wishlist</span>
               </div>
             </a>
-            <a href="#_address">
-              <div class="side_list_item ads ">
-                <i class="fa-sharp fa-solid fa-location-dot fa-beat-fade"></i>
+            <a onclick="add('addrs')">
+              <div class="side_list_item ads " id="add_tab">
+                <i class="fa-sharp fa-solid fa-location-dot "></i>
                 <span>Address</span>
               </div>
             </a>
             <a href="#">
               <div class="side_list_item">
-                <i class="fa-solid fa-lock-open fa-beat-fade"></i>
+                <i class="fa-solid fa-lock-open "></i>
                 <span>Sign Out</span>
               </div>
             </a>
@@ -113,7 +111,7 @@
         </div>
 
         <div class="profile_container wh-100">
-          <div id="_profile" class="myProfile_box">
+          <div id="profile" class="myProfile_box none">
             <h1 class="aling_center dash_title">My Profile</h1>
             <div class="profile_img_box mob_dis_f">
               <div class="profile_img">
@@ -123,29 +121,33 @@
               </div>
               <h1>Sunogungunao</h1>
             </div>
-            <h2 class="m-t-2">Laura Dev</h2>
-            <div class="gender m-t-2">
-              <h3>Gender</h3>
-              <input type="radio" name="male">
-              <label for="male">Male</label>
-              <input type="radio" name="female">
-              <label for="male">Female</label>
-            </div>
-            <div class="profile_email m-t-2">
-              <h3>E-mail</h3>
-              <p>laura20dev@gmail.com</p>
-            </div>
-            <div class="profile_number m-t-2">
-              <h3>Primary Number</h3>
-              <p>9640392854</p>
-            </div>
-            <div class="profile_number m-t-2">
-              <h3>Alternate Number</h3>
-              <p>9640392854</p>
-            </div>
+
+            <form action="" method="post">
+              <div class="pc-prof inp">
+                <input type="text" placeholder="Piyush Maurya">
+              </div>
+              <div class="pc-prof rad">
+                <input type="radio" checked name="gender">
+                <label for="male">Male</label>
+                <input type="radio" name="gender">
+                <label for="male">Female</label>
+              </div>
+              <div class="pc-prof inp">
+                <input type="text" placeholder="laura20dev@gmail.com">
+              </div>
+              <div class="pc-prof inp">
+                <input type="text" placeholder="laura20dev@gmail.com">
+              </div>
+
+
+              <button class="pc-dash-btn">Update</button>
+
+            </form>
+
           </div>
 
-          <div id="_address" class="myProfile_box">
+
+          <div id="address" class="myProfile_box none">
             <h1 class="aling_center dash_title">Save Addresses</h1>
 
             <div class="dash_address_scroll_box">
@@ -167,89 +169,13 @@
               </div>
 
 
-              <div class="address_box m-t-2">
-                <span>Shiv Shanker</span>
-                <span>+91 8604298591</span>
-                <span>abhikush49001@gmail.com</span>
-                <span>Vill + Post -</span>
-                <span>Bangla</span>
-                <span>District -</span>
-                <span>Deoia -274533</span>
-                <a href="./checkout.html#_edit_address">
-                  <div class="Edit_icon">
-                    <i class="fa-solid fa-pen-to-square"></i>
-                  </div>
-                </a>
-              </div>
+
+
 
 
               <div class="address_box m-t-2">
-                <span>Shiv Shanker</span>
-                <span>+91 8604298591</span>
-                <span>abhikush49001@gmail.com</span>
-                <span>Vill + Post -</span>
-                <span>Bangla</span>
-                <span>District -</span>
-                <span>Deoia -274533</span>
-                <a href="./checkout.html#_edit_address">
-                  <div class="Edit_icon">
-                    <i class="fa-solid fa-pen-to-square"></i>
-                  </div>
-                </a>
-              </div>
-
-
-              <div class="address_box m-t-2">
-                <span>Shiv Shanker</span>
-                <span>+91 8604298591</span>
-                <span>abhikush49001@gmail.com</span>
-                <span>Vill + Post -</span>
-                <span>Bangla</span>
-                <span>District -</span>
-                <span>Deoia -274533</span>
-                <a href="./checkout.html#_edit_address">
-                  <div class="Edit_icon">
-                    <i class="fa-solid fa-pen-to-square"></i>
-                  </div>
-                </a>
-              </div>
-
-
-              <div class="address_box m-t-2">
-                <span>Shiv Shanker</span>
-                <span>+91 8604298591</span>
-                <span>abhikush49001@gmail.com</span>
-                <span>Vill + Post -</span>
-                <span>Bangla</span>
-                <span>District -</span>
-                <span>Deoia -274533</span>
-                <a href="./checkout.html#_edit_address">
-                  <div class="Edit_icon">
-                    <i class="fa-solid fa-pen-to-square"></i>
-                  </div>
-                </a>
-              </div>
-
-
-              <div class="address_box m-t-2">
-                <span>Shiv Shanker</span>
-                <span>+91 8604298591</span>
-                <span>abhikush49001@gmail.com</span>
-                <span>Vill + Post -</span>
-                <span>Bangla</span>
-                <span>District -</span>
-                <span>Deoia -274533</span>
-                <a href="./checkout.html#_edit_address">
-                  <div class="Edit_icon">
-                    <i class="fa-solid fa-pen-to-square"></i>
-                  </div>
-                </a>
-              </div>
-
-
-              <div class="address_box m-t-2">
-                <span>Shiv Shanker</span>
-                <span>+91 8604298591</span>
+                <p>Shiv Shanker</p>
+                <p>+91 8604298591</p>
                 <span>abhikush49001@gmail.com</span>
                 <span>Vill + Post -</span>
                 <span>Bangla</span>
@@ -280,8 +206,78 @@
             </div>
           </div>
 
+
+          <div id="my_ord" class="myProfile_box my_ord">
+            <div class="cart_product_caontainer">
+
+              <div class="cart_item">
+                <div class="cart_img_box">
+                  <img src="images/t_shirt.png" alt="t_shirt" />
+                </div>
+                <div class="cart_product_detail">
+                  <div class="cart_title">
+                    <h2>Product name hoga jaise</h2>
+                  </div>
+                  <div class="cart_price opr">
+                    
+                   <p>₹400</p>
+                  </div>
+                  <div class="cart_size">
+                   
+                    <p><span>Size:-</span> M</p>
+                  </div>
+                  <div class="cart_color">
+                    
+                    <p><span>Color:- </span>Darkblue</p>
+                  </div>
+                </div>
+
+                <div class="cart_btn_group">
+                  <div class="quantity m-t-2">
+                    <div class="input_btn ">
+                      <i class="dec fa-sharp fa-solid fa-circle-minus"></i>
+                      <input type="text" class="cart_quantity quaintity" value="1" />
+                      <i class="inc fa-sharp fa-solid fa-circle-plus"></i>
+                    </div>
+                  </div>
+                  <div class="btn_remove">
+                    <button class="Btn cart_btn btn_remove">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+          </div>
+
         </div>
 
+        <script>
+
+          function add(addId) {
+
+            const profile = document.getElementById('profile');
+            const address = document.getElementById('address');
+            const prof_tab = document.getElementById('prof_tab');
+            const add_tab = document.getElementById('add_tab');
+            if (addId == 'addrs') {
+              profile.classList.add('none');
+              address.classList.remove('none')
+              add_tab.classList.add('user_sidelink_active');
+              prof_tab.classList.remove('user_sidelink_active');
+            }
+            if (addId == 'prof') {
+              address.classList.add('none');
+              profile.classList.remove('none')
+              prof_tab.classList.add('user_sidelink_active');
+              add_tab.classList.remove('user_sidelink_active');
+            }
+          }
+        </script>
         <div class="mob_bottom_menuBar">
           <div class="left_nav_btnGroup">
             <a href="../Home_page/index.html">
@@ -319,6 +315,8 @@
         </div>
       </div>
 
+
+      <!-- mobile view -->
       <div class="mob-dash pc-none">
         <div class="dash-top-box">
           <div class="container">
@@ -394,131 +392,132 @@
                 </div>
 
               </div>
-              </div>
-              
-              <div class="add-info usr-dash-itm none" id="usr-add">
-                <div class="usr-addr-bx">
-                  <div class="row">
-                    <div class="col-9">
-                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, libero.</p>
-                      <p>+91 8303567728</p>
+            </div>
 
-                    </div>
-                    <div class="col-3">
-                      <div class="usr-add-icn">
-                        <div class="usr-add-dlt">
-                          <i class="fa-solid fa-trash"></i>
-                        </div>
-                        <div class="usr-add-edt">
-                          <i class="fa-solid fa-pen"></i>
-                        </div>
-                      </div>
+            <div class="add-info usr-dash-itm" id="usr-add">
+              <div class="usr-addr-bx">
+                <div class="row">
+                  <div class="col-9">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, libero.</p>
+                    <p>+91 8303567728</p>
 
-                    </div>
                   </div>
-
-                </div>
-                <div class="usr-addr-bx">
-                  <div class="row">
-                    <div class="col-9">
-                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, libero.</p>
-                      <p>+91 8303567728</p>
-
-                    </div>
-                    <div class="col-3">
-                      <div class="usr-add-icn">
-                        <div class="usr-add-dlt">
-                          <i class="fa-solid fa-trash"></i>
-                        </div>
-                        <div class="usr-add-edt">
-                          <i class="fa-solid fa-pen"></i>
-                        </div>
+                  <div class="col-3">
+                    <div class="usr-add-icn">
+                      <div class="usr-add-dlt">
+                        <i class="fa-solid fa-trash"></i>
                       </div>
-
+                      <div class="usr-add-edt">
+                        <i class="fa-solid fa-pen"></i>
+                      </div>
                     </div>
+
                   </div>
-
                 </div>
-              </div>
 
-              <div class="add-addr none">
+              </div>
+              <div class="usr-addr-bx">
+                <div class="row">
+                  <div class="col-9">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, libero.</p>
+                    <p>+91 8303567728</p>
+
+                  </div>
+                  <div class="col-3">
+                    <div class="usr-add-icn">
+                      <div class="usr-add-dlt">
+                        <i class="fa-solid fa-trash"></i>
+                      </div>
+                      <div class="usr-add-edt">
+                        <i class="fa-solid fa-pen"></i>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+              <div class="add-addr ">
                 <button>Add Address</button>
               </div>
             </div>
-          </div>
 
+
+          </div>
         </div>
-        <div class="bottom_wraper"></div>
-        <div class="mob_bottom_model mob-none">
-          <div class="bottom_top_line"></div>
-          <div class="bottom_model_contant hide mob_dis_b">
-            <div class="side_links">
-              <a href="#_profile">
-                <div class="side_list_item mob-myp  user_sidelink_active">
-                  <i class="fa-solid fa-address-card fa-beat-fade"></i>
-                  <span>My Profile</span>
-                </div>
-              </a>
-              <a href="/Home_page/myorder.html">
-                <div class="side_list_item">
-                  <i class="fa-solid fa-cart-shopping fa-beat-fade"></i>
-                  <span>My Orders</span>
-                </div>
-              </a>
-              <a href="/Home_page/cart.html">
-                <div class="side_list_item">
-                  <i class="fa-sharp fa-solid fa-cart-plus fa-beat-fade"></i>
-                  <span>My Cart</span>
-                </div>
-              </a>
-              <a href="/Home_page/wishlist.html">
-                <div class="side_list_item">
-                  <i class="fa-solid fa-heart-circle-plus fa-beat-fade"></i>
-                  <span>My Wishlist</span>
-                </div>
-              </a>
-              <a href="#_address">
-                <div class="side_list_item mob-ads ">
-                  <i class="fa-sharp fa-solid fa-location-dot fa-beat-fade"></i>
-                  <span>Address</span>
-                </div>
-              </a>
-              <a href="#">
-                <div class="side_list_item">
-                  <i class="fa-solid fa-lock-open fa-beat-fade"></i>
-                  <span>Sign Out</span>
-                </div>
-              </a>
-            </div>
+
+      </div>
+      <div class="bottom_wraper"></div>
+      <div class="mob_bottom_model mob-none">
+        <div class="bottom_top_line"></div>
+        <div class="bottom_model_contant hide mob_dis_b">
+          <div class="side_links">
+            <a href="#_profile">
+              <div class="side_list_item mob-myp  user_sidelink_active">
+                <i class="fa-solid fa-address-card fa-beat-fade"></i>
+                <span>My Profile</span>
+              </div>
+            </a>
+            <a href="/Home_page/myorder.html">
+              <div class="side_list_item">
+                <i class="fa-solid fa-cart-shopping fa-beat-fade"></i>
+                <span>My Orders</span>
+              </div>
+            </a>
+            <a href="/Home_page/cart.html">
+              <div class="side_list_item">
+                <i class="fa-sharp fa-solid fa-cart-plus fa-beat-fade"></i>
+                <span>My Cart</span>
+              </div>
+            </a>
+            <a href="/Home_page/wishlist.html">
+              <div class="side_list_item">
+                <i class="fa-solid fa-heart-circle-plus fa-beat-fade"></i>
+                <span>My Wishlist</span>
+              </div>
+            </a>
+            <a href="#_address">
+              <div class="side_list_item mob-ads ">
+                <i class="fa-sharp fa-solid fa-location-dot fa-beat-fade"></i>
+                <span>Address</span>
+              </div>
+            </a>
+            <a href="#">
+              <div class="side_list_item">
+                <i class="fa-solid fa-lock-open fa-beat-fade"></i>
+                <span>Sign Out</span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
+    </div>
 
-      <script src="../Home_page/script.js"></script>
-      <script src="../Home_page/scriptSearch.js"></script>
-      <script src="../Home_page/SrciptMenuModel.js"></script>
-      <script>
-        const tabs = document.querySelectorAll('.usr-tb-lst a');
-        const tabContents = document.querySelectorAll('.usr-dash-itm');
-
-
-        tabs.forEach((tab, index) => {
-          tab.addEventListener("click", () => {
-
-            tabs.forEach((tab) => tab.classList.remove("prod_actv"));
-
-            tab.classList.add("prod_actv");
-
-            tabContents.forEach((c) => c.classList.remove('prod_actv'));
+    <script src="../Home_page/script.js"></script>
+    <script src="../Home_page/scriptSearch.js"></script>
+    <script src="../Home_page/SrciptMenuModel.js"></script>
+    <script>
+      const tabs = document.querySelectorAll('.usr-tb-lst a');
+      const tabContents = document.querySelectorAll('.usr-dash-itm');
 
 
-            tabContents[index].classList.add("prod_actv")
-          });
+      tabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => {
+
+          tabs.forEach((tab) => tab.classList.remove("prod_actv"));
+
+          tab.classList.add("prod_actv");
+
+          tabContents.forEach((c) => c.classList.remove('prod_actv'));
+
+
+          tabContents[index].classList.add("prod_actv")
         });
+      });
 
-        tabs[0].click();
+      tabs[0].click();
 
 
-      </script>
+    </script>
 
   </body>

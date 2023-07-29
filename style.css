@@ -6,9 +6,6 @@
   overscroll-behavior: none;
 }
 
-p {
-  margin-bottom: 0px !important;
-}
 
 a {
   color          : unset;
@@ -1567,7 +1564,7 @@ form .input_box button {
 .cart_price h5 {
   font-size: 18px;
   color    : #444;
-  width    : 5px;
+ 
 }
 
 .cart_price input {
